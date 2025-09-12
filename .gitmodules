@@ -1,0 +1,3 @@
+[submodule "external/2025-kookmin-contest"]
+	path = external/2025-kookmin-contest
+	url = https://github.com/doldolmeng2/2025-kookmin-contest
