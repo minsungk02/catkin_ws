@@ -1,3 +1,0 @@
-kp: 0.6
-debug: true
-camera_topic: /camera/image_raw
