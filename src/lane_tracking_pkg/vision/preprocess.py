@@ -6,7 +6,7 @@ import numpy as np
 
 def preprocess_image(frame: np.ndarray, roi_y_ratio: float,
                      canny_low: int, canny_high: int,
-                     gaussian_kernel: int) -> Tuple[np.ndarray, np.ndarray]:
+                     gaussian_kernel: int) -> Tuple[np.ndarray, np.ndarray, int]:
     """이미지를 전처리하여 ROI와 엣지 맵을 반환.
 
     Args:
@@ -18,6 +18,7 @@ def preprocess_image(frame: np.ndarray, roi_y_ratio: float,
     Returns:
         edges: 엣지 바이너리 이미지.
         roi_color: ROI 색상 이미지(BGR).
+        y_start: ROI가 시작되는 세로 픽셀 위치.
     """
     h, _ = frame.shape[:2]
     y_start = int(h * roi_y_ratio)
@@ -41,4 +42,4 @@ def preprocess_image(frame: np.ndarray, roi_y_ratio: float,
 
     blur = cv2.GaussianBlur(gray, (gaussian_kernel, gaussian_kernel), 0)
     edges = cv2.Canny(blur, canny_low, canny_high)
-    return edges, roi_color
+    return edges, roi_color, y_start
