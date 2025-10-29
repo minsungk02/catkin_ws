@@ -192,12 +192,13 @@ class VehicleControlNode:
         if self.obstacle_detected:
             target = min(target, self._kph_to_mps(15.0))
 
-        # 신호 및 정지선 로직
-        should_stop = False
-        if self.traffic_light_state in ("red", "yellow"):
-            should_stop = should_stop or self.stop_line_detected
-        if should_stop:
+        # 신호등 로직: 빨간불이면 즉시 정지 목표, 노란불은 정지선 인식 시 감속
+        if self.traffic_light_state == "red":
             target = 0.0
+        elif self.traffic_light_state == "yellow" and self.stop_line_detected:
+            target = min(target, self._kph_to_mps(10.0))
+        elif self.stop_line_detected and self.traffic_light_state != "green":
+            target = min(target, self._kph_to_mps(5.0))
 
         return max(target, 0.0)
 

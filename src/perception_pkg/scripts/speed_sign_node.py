@@ -32,7 +32,9 @@ class SpeedSignNode:
             float(rospy.get_param("~decay_timeout", 5.0))
         )
         score_threshold = float(rospy.get_param("~score_threshold", 0.5))
-        self.target_prefix = tuple(rospy.get_param("~label_prefixes", ["speed_sign_"]))
+        self.target_prefix = tuple(
+            str(p) for p in rospy.get_param("~label_prefixes", ["speed_sign", "speedlimit"])
+        )
 
         default_range_param = rospy.get_param("~default_speed_range", [self.default_speed, self.default_speed])
         self.default_range = self._parse_range_param(default_range_param, self.default_speed)
@@ -47,50 +49,47 @@ class SpeedSignNode:
             )
         )
 
-        self.pt_model_path = rospy.get_param("~pt_model_path", "")
+        detector_model = rospy.get_param("~detector_model_path", "")
+        detector_imgsz = int(rospy.get_param("~detector_imgsz", 640))
+        detector_device_param = rospy.get_param("~detector_device", "")
+        detector_device = detector_device_param or None
+        mapping_param = rospy.get_param(
+            "~detector_label_mapping",
+            {
+                "speed_sign_30": "speed_sign_30",
+                "speed_sign_40": "speed_sign_40",
+                "speed_sign_50": "speed_sign_50",
+                "speedlimit_30": "speed_sign_30",
+                "speedlimit_40": "speed_sign_40",
+                "speedlimit_50": "speed_sign_50",
+            },
+        )
+        class_map = {str(k): str(v) for k, v in mapping_param.items()}
 
-        if self.pt_model_path:
-            pt_conf_threshold = float(rospy.get_param("~pt_conf_threshold", 0.4))
-            pt_iou_threshold = float(rospy.get_param("~pt_iou_threshold", 0.45))
-            label_prefix = rospy.get_param(
-                "~pt_label_prefix",
-                self.target_prefix[0] if self.target_prefix else "speed_sign_",
+        try:
+            self.detector = ObjectDetector(
+                score_threshold=score_threshold,
+                model_path=detector_model if detector_model else None,
+                class_map=class_map,
+                imgsz=detector_imgsz,
+                device=detector_device,
             )
-            class_names_param = rospy.get_param("~pt_class_names", [])
-            class_names = tuple(str(name) for name in class_names_param) if class_names_param else None
-            device = rospy.get_param("~pt_device", "")
-            device_arg = device if device else None
-
-            try:
-                from perception_pkg.perception.object_detection.yolo_speed_sign_pt import (
-                    YoloSpeedSignPTConfig,
-                    YoloSpeedSignPTDetector,
-                )
-
-                config = YoloSpeedSignPTConfig(
-                    model_path=self.pt_model_path,
-                    conf_threshold=pt_conf_threshold,
-                    iou_threshold=pt_iou_threshold,
-                    label_prefix=label_prefix,
-                    class_names=class_names,
-                    device=device_arg,
-                )
-                self.detector = YoloSpeedSignPTDetector(config)
+            if detector_model:
                 rospy.loginfo(
-                    "[speed_sign] YOLO PT detector loaded (model=%s, device=%s)",
-                    self.pt_model_path,
-                    device_arg or "auto",
+                    "[speed_sign] detector model loaded: %s (imgsz=%d, device=%s)",
+                    detector_model,
+                    detector_imgsz,
+                    detector_device or "auto",
                 )
-            except Exception as exc:
-                rospy.logerr("[speed_sign] YOLO PT detector 초기화 실패: %s", exc)
-                raise
-        else:
-            self.detector = ObjectDetector(score_threshold=score_threshold)
+        except Exception as exc:
+            rospy.logerr("[speed_sign] detector 초기화 실패: %s", exc)
+            raise
 
         self.limit_pub = rospy.Publisher("/perception/speed_limit", Float32, queue_size=1)
         self.range_pub = rospy.Publisher(
             "/perception/speed_limit_range", Float32MultiArray, queue_size=1
         )
+        self.overlay_pub = rospy.Publisher("/perception/speed_sign_overlay", Image, queue_size=1)
         self.current_limit = self.default_speed
         self.current_range: Tuple[float, float] = self.default_range
         self.last_detection: rospy.Time = rospy.Time(0)
@@ -147,6 +146,7 @@ class SpeedSignNode:
 
         self.limit_pub.publish(Float32(data=float(self.current_limit)))
         self._publish_range()
+        self._publish_overlay(frame, detections)
 
     def extract_speed_limit(self, detections) -> Optional[Tuple[float, str]]:
         """라벨에서 속도 값을 추출."""
@@ -155,11 +155,13 @@ class SpeedSignNode:
         best_label: Optional[str] = None
 
         for det in detections:
-            if not det.label.startswith(self.target_prefix):
-                continue
             value = self._parse_speed(det.label)
             if value is None:
                 continue
+            if self.target_prefix and not any(prefix in det.label for prefix in self.target_prefix):
+                label_clean = det.label.replace(" ", "").replace("_", "")
+                if not label_clean.isdigit():
+                    continue
             if det.score > best_score:
                 best_score = det.score
                 best_limit = value
@@ -181,6 +183,50 @@ class SpeedSignNode:
     def _publish_range(self) -> None:
         msg = Float32MultiArray(data=[float(self.current_range[0]), float(self.current_range[1])])
         self.range_pub.publish(msg)
+
+    def _publish_overlay(self, frame: np.ndarray, detections) -> None:
+        overlay = frame.copy()
+        best_det = None
+        best_score = -1.0
+
+        for det in detections:
+            value = self._parse_speed(det.label)
+            if value is None:
+                continue
+            if det.score > best_score:
+                best_det = det
+                best_score = det.score
+
+        if best_det is not None:
+            x1, y1, x2, y2 = best_det.bbox
+            cv2.rectangle(overlay, (x1, y1), (x2, y2), (0, 200, 255), 2)
+            label_text = f"{best_det.label} ({best_det.score:.2f})"
+            cv2.putText(
+                overlay,
+                label_text,
+                (x1, max(y1 - 5, 0)),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (0, 0, 0),
+                3,
+                cv2.LINE_AA,
+            )
+            cv2.putText(
+                overlay,
+                label_text,
+                (x1, max(y1 - 5, 0)),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (0, 255, 255),
+                2,
+                cv2.LINE_AA,
+            )
+
+        try:
+            msg = self.bridge.cv2_to_imgmsg(overlay, encoding="bgr8")
+            self.overlay_pub.publish(msg)
+        except Exception as exc:
+            rospy.logwarn("[speed_sign] overlay publish failed: %s", exc)
 
     def _parse_range_param(self, value, fallback: float) -> Tuple[float, float]:
         try:
@@ -225,3 +271,49 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    def _publish_overlay(self, frame: np.ndarray, detections) -> None:
+        overlay = frame.copy()
+        label_text = None
+        # 가장 높은 score의 표지판 하나만 표시
+        best_det = None
+        best_score = -1.0
+        for det in detections:
+            value = self._parse_speed(det.label)
+            if value is None:
+                continue
+            if det.score > best_score:
+                best_det = det
+                best_score = det.score
+
+        if best_det is not None:
+            x1, y1, x2, y2 = best_det.bbox
+            cv2.rectangle(overlay, (x1, y1), (x2, y2), (0, 200, 255), 2)
+            label_text = f"{best_det.label} ({best_det.score:.2f})"
+
+        if label_text:
+            cv2.putText(
+                overlay,
+                label_text,
+                (10, 30),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.8,
+                (0, 0, 0),
+                3,
+                cv2.LINE_AA,
+            )
+            cv2.putText(
+                overlay,
+                label_text,
+                (10, 30),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.8,
+                (0, 255, 255),
+                2,
+                cv2.LINE_AA,
+            )
+
+        try:
+            msg = self.bridge.cv2_to_imgmsg(overlay, encoding="bgr8")
+            self.overlay_pub.publish(msg)
+        except Exception as exc:
+            rospy.logwarn("[speed_sign] overlay publish failed: %s", exc)
