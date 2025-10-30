@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from typing import Optional, Sequence, Tuple
+from typing import Dict, Optional, Sequence, Tuple
 
 import cv2
 import numpy as np
@@ -16,7 +16,7 @@ from perception_pkg.perception.object_detection.detector import ObjectDetector
 
 
 class TrafficLightNode:
-    """YOLO 검출 + HSV 마스크 기반으로 신호등 색상을 판정."""
+    """YOLO 검출 + HSV 마스크 기반으로 신호등 상태를 판정."""
 
     LABEL_MAP = {
         "traffic_light_red": "red",
@@ -54,15 +54,21 @@ class TrafficLightNode:
                 "yellow_light": "traffic_light_yellow",
             },
         )
-        label_map = {str(k): str(v) for k, v in detector_label_map_param.items()}
+        detector_label_map = {str(k): str(v) for k, v in detector_label_map_param.items()}
 
+        self.unknown_timeout = rospy.Duration.from_sec(
+            float(rospy.get_param("~unknown_timeout", 2.0))
+        )
+
+        self.pt_model_path = rospy.get_param("~pt_model_path", "")
         self.detector: Optional[ObjectDetector] = None
-        if detector_model:
-            try:
+
+        try:
+            if detector_model:
                 self.detector = ObjectDetector(
                     score_threshold=score_threshold,
                     model_path=detector_model,
-                    class_map=label_map,
+                    class_map=detector_label_map,
                     imgsz=detector_imgsz,
                     device=detector_device,
                 )
@@ -72,10 +78,46 @@ class TrafficLightNode:
                     detector_imgsz,
                     detector_device or "auto",
                 )
-            except Exception as exc:
-                rospy.logerr("[traffic_light] detector 초기화 실패: %s", exc)
-                raise
+            elif self.pt_model_path:
+                pt_conf_threshold = float(rospy.get_param("~pt_conf_threshold", 0.4))
+                pt_iou_threshold = float(rospy.get_param("~pt_iou_threshold", 0.45))
+                label_map_param = rospy.get_param(
+                    "~pt_label_map",
+                    {
+                        "Green Light": "traffic_light_green",
+                        "Red Light": "traffic_light_red",
+                    },
+                )
+                label_map = self._load_label_map(label_map_param)
+                device = rospy.get_param("~pt_device", "")
+                device_arg = device if device else None
 
+                from perception_pkg.perception.object_detection.yolo_speed_sign_pt import (
+                    YoloSpeedSignPTConfig,
+                    YoloSpeedSignPTDetector,
+                )
+
+                config = YoloSpeedSignPTConfig(
+                    model_path=self.pt_model_path,
+                    conf_threshold=pt_conf_threshold,
+                    iou_threshold=pt_iou_threshold,
+                    label_prefix="traffic_light_",
+                    label_map=label_map if label_map else None,
+                    device=device_arg,
+                )
+                self.detector = YoloSpeedSignPTDetector(config)
+                rospy.loginfo(
+                    "[traffic_light] YOLO PT detector loaded (model=%s, device=%s)",
+                    self.pt_model_path,
+                    device_arg or "auto",
+                )
+            else:
+                self.detector = ObjectDetector(score_threshold=score_threshold)
+        except Exception as exc:
+            rospy.logerr("[traffic_light] detector 초기화 실패: %s", exc)
+            raise
+
+        # HSV 기반 설정
         self.use_lane_split = bool(rospy.get_param("~use_lane_split", True))
         self.lane_roi_ratio = float(rospy.get_param("~lane_roi_ratio", 0.55))
         self.roi_margin = float(rospy.get_param("~roi_margin", 0.02))
@@ -88,9 +130,6 @@ class TrafficLightNode:
         self.min_ratio = float(rospy.get_param("~ratio_threshold", 0.08))
         self.state_margin = float(rospy.get_param("~state_margin", 0.05))
         self.off_value_threshold = float(rospy.get_param("~off_value_threshold", 60.0))
-        self.unknown_timeout = rospy.Duration.from_sec(
-            float(rospy.get_param("~unknown_timeout", 2.0))
-        )
 
         self.lower_red_1 = np.array(rospy.get_param("~lower_red_1", [0, 80, 80]), dtype=np.uint8)
         self.upper_red_1 = np.array(rospy.get_param("~upper_red_1", [10, 255, 255]), dtype=np.uint8)
@@ -102,7 +141,9 @@ class TrafficLightNode:
         self.upper_green = np.array(rospy.get_param("~upper_green", [90, 255, 255]), dtype=np.uint8)
 
         self.state_pub = rospy.Publisher("/perception/traffic_light_state", String, queue_size=1)
-        self.overlay_pub = rospy.Publisher("/perception/traffic_light_overlay", Image, queue_size=1)
+        self.overlay_pub = rospy.Publisher(
+            "/perception/traffic_light_overlay", Image, queue_size=1
+        )
         self.current_state = "unknown"
         self.last_update = rospy.Time(0)
 
@@ -138,11 +179,11 @@ class TrafficLightNode:
 
     def handle_frame(self, frame: np.ndarray, stamp: rospy.Time) -> None:
         state: Optional[str] = None
-
         detections = None
+
         if self.detector is not None:
             detections = self.detector.detect(frame)
-            state = self.extract_state_from_detections(detections or [])
+            state = self.extract_state_from_detections(detections)
 
         if state is None:
             state = self.detect_state_with_hsv(frame)
@@ -241,7 +282,7 @@ class TrafficLightNode:
         ratio = float(cv2.countNonZero(mask)) / float(mask.size)
         return ratio
 
-    def decide_state(self, ratios: dict[str, float], hsv: np.ndarray) -> Optional[str]:
+    def decide_state(self, ratios: Dict[str, float], hsv: np.ndarray) -> Optional[str]:
         sorted_states = sorted(ratios.items(), key=lambda item: item[1], reverse=True)
         best_state, best_ratio = sorted_states[0]
         second_ratio = sorted_states[1][1] if len(sorted_states) > 1 else 0.0
@@ -315,6 +356,16 @@ class TrafficLightNode:
             self.overlay_pub.publish(msg)
         except Exception as exc:
             rospy.logwarn("[traffic_light] overlay publish failed: %s", exc)
+
+    def _load_label_map(self, param_dict) -> Dict[str, str]:
+        mapping: Dict[str, str] = {}
+        if isinstance(param_dict, dict):
+            for key, value in param_dict.items():
+                try:
+                    mapping[str(key)] = str(value)
+                except (TypeError, ValueError):
+                    continue
+        return mapping
 
     def spin(self) -> None:
         rospy.spin()

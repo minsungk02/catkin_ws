@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.0.2)
 project(morai_msgs)
 
 
@@ -138,4 +138,3 @@ catkin_package(
   geometry_msgs
   message_runtime
 )
-

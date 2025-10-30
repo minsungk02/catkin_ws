@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import re
-from typing import Optional, Tuple
+from typing import Dict, Optional, Tuple
 
 import cv2
 import numpy as np
@@ -27,24 +27,45 @@ class SpeedSignNode:
         # 파라미터
         self.camera_topic = rospy.get_param("~camera_topic", "/camera/image_raw")
         self.use_compressed = rospy.get_param("~use_compressed", False)
-        self.default_speed = float(rospy.get_param("~default_speed_limit", 30.0))
+        self.default_speed = float(rospy.get_param("~default_speed_limit", 50.0))
         self.decay_timeout = rospy.Duration.from_sec(
             float(rospy.get_param("~decay_timeout", 5.0))
         )
         score_threshold = float(rospy.get_param("~score_threshold", 0.5))
         self.target_prefix = tuple(
-            str(p) for p in rospy.get_param("~label_prefixes", ["speed_sign", "speedlimit"])
+            str(p)
+            for p in rospy.get_param(
+                "~label_prefixes", ["speed_sign_", "speed_sign", "speedlimit"]
+            )
         )
 
-        default_range_param = rospy.get_param("~default_speed_range", [self.default_speed, self.default_speed])
+        default_range_param = rospy.get_param(
+            "~default_speed_range", [self.default_speed, self.default_speed]
+        )
         self.default_range = self._parse_range_param(default_range_param, self.default_speed)
         self.speed_ranges = self._load_speed_ranges(
             rospy.get_param(
                 "~speed_ranges",
                 {
+                    "speed_sign_30": [20.0, 30.0],
+                    "speed_sign_40": [30.0, 40.0],
+                    "speed_sign_50": [40.0, 50.0],
+                    "30": [20.0, 30.0],
+                    "40": [30.0, 40.0],
+                    "50": [40.0, 50.0],
                     "KR_Sign_SL_30": [20.0, 30.0],
                     "KR_Sign_SL_40": [30.0, 40.0],
                     "KR_Sign_SL_50": [40.0, 50.0],
+                },
+            )
+        )
+        self.label_speed_map = self._load_label_speed_map(
+            rospy.get_param(
+                "~label_speed_map",
+                {
+                    "speed_sign_30": 25.0,
+                    "speed_sign_40": 35.0,
+                    "speed_sign_50": 45.0,
                 },
             )
         )
@@ -66,21 +87,69 @@ class SpeedSignNode:
         )
         class_map = {str(k): str(v) for k, v in mapping_param.items()}
 
+        self.pt_model_path = rospy.get_param("~pt_model_path", "")
+        self.detector: Optional[ObjectDetector] = None
+
         try:
-            self.detector = ObjectDetector(
-                score_threshold=score_threshold,
-                model_path=detector_model if detector_model else None,
-                class_map=class_map,
-                imgsz=detector_imgsz,
-                device=detector_device,
-            )
             if detector_model:
+                self.detector = ObjectDetector(
+                    score_threshold=score_threshold,
+                    model_path=detector_model,
+                    class_map=class_map,
+                    imgsz=detector_imgsz,
+                    device=detector_device,
+                )
                 rospy.loginfo(
                     "[speed_sign] detector model loaded: %s (imgsz=%d, device=%s)",
                     detector_model,
                     detector_imgsz,
                     detector_device or "auto",
                 )
+            elif self.pt_model_path:
+                pt_conf_threshold = float(rospy.get_param("~pt_conf_threshold", 0.4))
+                pt_iou_threshold = float(rospy.get_param("~pt_iou_threshold", 0.45))
+                label_prefix = rospy.get_param(
+                    "~pt_label_prefix",
+                    self.target_prefix[0] if self.target_prefix else "speed_sign_",
+                )
+                class_names_param = rospy.get_param("~pt_class_names", [])
+                class_names = (
+                    tuple(str(name) for name in class_names_param) if class_names_param else None
+                )
+                label_map_param = rospy.get_param(
+                    "~pt_label_map",
+                    {
+                        "Speed Limit 30": "speed_sign_30",
+                        "Speed Limit 40": "speed_sign_40",
+                        "Speed Limit 50": "speed_sign_50",
+                    },
+                )
+                label_map = self._load_label_map(label_map_param)
+                device = rospy.get_param("~pt_device", "")
+                device_arg = device if device else None
+
+                from perception_pkg.perception.object_detection.yolo_speed_sign_pt import (
+                    YoloSpeedSignPTConfig,
+                    YoloSpeedSignPTDetector,
+                )
+
+                config = YoloSpeedSignPTConfig(
+                    model_path=self.pt_model_path,
+                    conf_threshold=pt_conf_threshold,
+                    iou_threshold=pt_iou_threshold,
+                    label_prefix=label_prefix,
+                    class_names=class_names,
+                    label_map=label_map if label_map else None,
+                    device=device_arg,
+                )
+                self.detector = YoloSpeedSignPTDetector(config)
+                rospy.loginfo(
+                    "[speed_sign] YOLO PT detector loaded (model=%s, device=%s)",
+                    self.pt_model_path,
+                    device_arg or "auto",
+                )
+            else:
+                self.detector = ObjectDetector(score_threshold=score_threshold)
         except Exception as exc:
             rospy.logerr("[speed_sign] detector 초기화 실패: %s", exc)
             raise
@@ -155,12 +224,14 @@ class SpeedSignNode:
         best_label: Optional[str] = None
 
         for det in detections:
-            value = self._parse_speed(det.label)
+            value = self._limit_for_label(det.label)
+            if value is None:
+                value = self._parse_speed(det.label)
             if value is None:
                 continue
             if self.target_prefix and not any(prefix in det.label for prefix in self.target_prefix):
                 label_clean = det.label.replace(" ", "").replace("_", "")
-                if not label_clean.isdigit():
+                if not label_clean.isdigit() and det.label not in self.label_speed_map:
                     continue
             if det.score > best_score:
                 best_score = det.score
@@ -188,19 +259,25 @@ class SpeedSignNode:
         overlay = frame.copy()
         best_det = None
         best_score = -1.0
+        best_limit = None
 
         for det in detections:
-            value = self._parse_speed(det.label)
+            value = self._limit_for_label(det.label)
+            if value is None:
+                value = self._parse_speed(det.label)
             if value is None:
                 continue
             if det.score > best_score:
                 best_det = det
                 best_score = det.score
+                best_limit = value
 
         if best_det is not None:
             x1, y1, x2, y2 = best_det.bbox
             cv2.rectangle(overlay, (x1, y1), (x2, y2), (0, 200, 255), 2)
             label_text = f"{best_det.label} ({best_det.score:.2f})"
+            if best_limit is not None:
+                label_text += f" -> {best_limit:.0f}"
             cv2.putText(
                 overlay,
                 label_text,
@@ -243,13 +320,23 @@ class SpeedSignNode:
                 ranges[str(key)] = self._parse_range_param(value, self.default_speed)
         return ranges
 
+    def _load_label_map(self, param_dict) -> Dict[str, str]:
+        mapping: Dict[str, str] = {}
+        if isinstance(param_dict, dict):
+            for key, value in param_dict.items():
+                try:
+                    mapping[str(key)] = str(value)
+                except (TypeError, ValueError):
+                    continue
+        return mapping
+
     def _speed_range_for(self, label: str, limit: float) -> Tuple[float, float]:
+        if label in self.speed_ranges:
+            return self.speed_ranges[label]
         stripped_label = self._strip_prefix(label)
         if stripped_label in self.speed_ranges:
             return self.speed_ranges[stripped_label]
-        if limit in self.speed_ranges:
-            return self.speed_ranges[limit]
-        numeric_key = str(int(limit))
+        numeric_key = str(int(round(limit)))
         if numeric_key in self.speed_ranges:
             return self.speed_ranges[numeric_key]
         return self.default_range
@@ -259,6 +346,24 @@ class SpeedSignNode:
             if label.startswith(prefix):
                 return label[len(prefix) :]
         return label
+
+    def _load_label_speed_map(self, param_dict) -> Dict[str, float]:
+        mapping: Dict[str, float] = {}
+        if isinstance(param_dict, dict):
+            for key, value in param_dict.items():
+                try:
+                    mapping[str(key)] = float(value)
+                except (TypeError, ValueError):
+                    continue
+        return mapping
+
+    def _limit_for_label(self, label: str) -> Optional[float]:
+        if label in self.label_speed_map:
+            return self.label_speed_map[label]
+        stripped = self._strip_prefix(label)
+        if stripped in self.label_speed_map:
+            return self.label_speed_map[stripped]
+        return None
 
     def spin(self) -> None:
         rospy.spin()
@@ -271,49 +376,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    def _publish_overlay(self, frame: np.ndarray, detections) -> None:
-        overlay = frame.copy()
-        label_text = None
-        # 가장 높은 score의 표지판 하나만 표시
-        best_det = None
-        best_score = -1.0
-        for det in detections:
-            value = self._parse_speed(det.label)
-            if value is None:
-                continue
-            if det.score > best_score:
-                best_det = det
-                best_score = det.score
-
-        if best_det is not None:
-            x1, y1, x2, y2 = best_det.bbox
-            cv2.rectangle(overlay, (x1, y1), (x2, y2), (0, 200, 255), 2)
-            label_text = f"{best_det.label} ({best_det.score:.2f})"
-
-        if label_text:
-            cv2.putText(
-                overlay,
-                label_text,
-                (10, 30),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 0, 0),
-                3,
-                cv2.LINE_AA,
-            )
-            cv2.putText(
-                overlay,
-                label_text,
-                (10, 30),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 255),
-                2,
-                cv2.LINE_AA,
-            )
-
-        try:
-            msg = self.bridge.cv2_to_imgmsg(overlay, encoding="bgr8")
-            self.overlay_pub.publish(msg)
-        except Exception as exc:
-            rospy.logwarn("[speed_sign] overlay publish failed: %s", exc)

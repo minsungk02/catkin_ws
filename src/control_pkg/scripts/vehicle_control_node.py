@@ -33,7 +33,7 @@ class VehicleControlNode:
         self.lookahead_gain = rospy.get_param("~lookahead_gain", 0.4)
         self.lookahead_min = rospy.get_param("~lookahead_min", 3.5)
         self.lookahead_max = rospy.get_param("~lookahead_max", 15.0)
-        self.cruise_speed_kph = rospy.get_param("~cruise_speed_kph", 30.0)
+        self.cruise_speed_kph = rospy.get_param("~cruise_speed_kph", 50.0)
         self.speed_kp = rospy.get_param("~speed_kp", 0.6)
         self.speed_ki = rospy.get_param("~speed_ki", 0.05)
         self.speed_kd = rospy.get_param("~speed_kd", 0.0)
@@ -93,12 +93,10 @@ class VehicleControlNode:
             self.stop_line_detected = True
             self.stop_line_timestamp = rospy.Time.now()
         else:
-            # 잔존 타임아웃 후 해제
             if rospy.Time.now() - self.stop_line_timestamp > self.stop_hold_time:
                 self.stop_line_detected = False
 
     def obstacle_cb(self, msg: Float32MultiArray) -> None:
-        # 간단히 탐지 여부만 확인 (향후 거리 추정으로 확장 가능)
         self.obstacle_detected = bool(msg.data)
 
     def lane_offset_cb(self, msg: Float32) -> None:
@@ -112,7 +110,7 @@ class VehicleControlNode:
             return
 
         vehicle_pos = (status.position.x, status.position.y)
-        yaw = float(status.heading)
+        yaw = math.radians(float(status.heading))
         speed = float(status.velocity.x)
 
         target_point = self._select_lookahead_point(vehicle_pos, yaw, speed)
@@ -151,7 +149,9 @@ class VehicleControlNode:
         min_idx = int(np.argmin(distances))
         dist_min = distances[min_idx]
         if dist_min > 50.0:
-            rospy.logwarn_throttle(5.0, "[control] vehicle far from reference path (%.2f m).", dist_min)
+            rospy.logwarn_throttle(
+                5.0, "[control] vehicle far from reference path (%.2f m).", dist_min
+            )
 
         for idx in range(min_idx, len(points)):
             if distances[idx] >= lookahead:
@@ -167,11 +167,9 @@ class VehicleControlNode:
         cos_yaw = math.cos(yaw)
         sin_yaw = math.sin(yaw)
 
-        # 차량 좌표계로 변환
         local_x = cos_yaw * dx + sin_yaw * dy
         local_y = -sin_yaw * dx + cos_yaw * dy
 
-        # 차선 중심 오프셋을 라디안 각도로 약하게 보정
         local_y += self.lane_offset * 0.5
 
         lookahead = math.hypot(local_x, local_y)
@@ -188,15 +186,19 @@ class VehicleControlNode:
         limit = min(self.speed_limit_mps, cruise)
         target = limit
 
-        # 사고 예방을 위한 기본 장애물 감속
         if self.obstacle_detected:
             target = min(target, self._kph_to_mps(15.0))
 
-        # 신호등 로직: 빨간불이면 즉시 정지 목표, 노란불은 정지선 인식 시 감속
         if self.traffic_light_state == "red":
-            target = 0.0
-        elif self.traffic_light_state == "yellow" and self.stop_line_detected:
-            target = min(target, self._kph_to_mps(10.0))
+            if self.stop_line_detected:
+                target = 0.0
+            else:
+                target = min(target, self._kph_to_mps(5.0))
+        elif self.traffic_light_state == "yellow":
+            if self.stop_line_detected:
+                target = min(target, self._kph_to_mps(10.0))
+            else:
+                target = min(target, self._kph_to_mps(5.0))
         elif self.stop_line_detected and self.traffic_light_state != "green":
             target = min(target, self._kph_to_mps(5.0))
 
@@ -234,7 +236,6 @@ class VehicleControlNode:
             accel = 0.0
             brake = float(np.clip(-control, 0.0, self.max_brake))
 
-        # 목표 속도가 0 부근이면 브레이크를 강제
         if target_speed < 0.1 and current_speed < 0.2:
             accel = 0.0
             brake = max(brake, 0.5)
