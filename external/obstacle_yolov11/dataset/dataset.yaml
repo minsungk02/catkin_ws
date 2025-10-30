@@ -1,8 +1,0 @@
-path: /home/minsungk02/catkin_ws/external/obstacle_yolov11/dataset
-train: images/train
-val: images/val
-test: images/test
-names:
-- cylindrical_cone
-- wall_type_1
-- wall_type_2
