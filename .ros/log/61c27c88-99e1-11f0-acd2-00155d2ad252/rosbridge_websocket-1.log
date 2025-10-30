@@ -1,0 +1,102 @@
+[rospy.client][INFO] 2025-09-25 16:30:00,933: init_node, name[/rosbridge_websocket], pid[259]
+[xmlrpc][INFO] 2025-09-25 16:30:00,934: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-25 16:30:00,935: Started XML-RPC server [http://172.22.52.56:39519/]
+[rospy.impl.masterslave][INFO] 2025-09-25 16:30:00,935: _ready: http://172.22.52.56:39519/
+[rospy.registration][INFO] 2025-09-25 16:30:00,936: Registering with master node http://172.22.52.56:11311
+[rospy.init][INFO] 2025-09-25 16:30:00,936: ROS Slave URI: [http://172.22.52.56:39519/]
+[rospy.init][INFO] 2025-09-25 16:30:00,936: registered with master
+[rospy.rosout][INFO] 2025-09-25 16:30:00,937: initializing /rosout core topic
+[xmlrpc][INFO] 2025-09-25 16:30:00,937: xml rpc node: starting XML-RPC server
+[rospy.rosout][INFO] 2025-09-25 16:30:00,939: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-09-25 16:30:00,941: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-09-25 16:30:00,962: Rosbridge WebSocket server started at ws://0.0.0.0:9090
+[rospy.internal][INFO] 2025-09-25 16:30:01,118: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-09-25 16:30:27,151: Client connected.  1 clients total.
+[rosout][INFO] 2025-09-25 16:30:27,155: Client connected.  2 clients total.
+[rosout][INFO] 2025-09-25 16:30:27,158: Client connected.  3 clients total.
+[rosout][INFO] 2025-09-25 16:30:27,161: Client connected.  4 clients total.
+[rosout][INFO] 2025-09-25 16:30:27,164: Client connected.  5 clients total.
+[rosout][INFO] 2025-09-25 16:30:27,166: Client connected.  6 clients total.
+[rosout][INFO] 2025-09-25 16:30:27,170: Client connected.  7 clients total.
+[rosout][INFO] 2025-09-25 16:30:27,172: Client connected.  8 clients total.
+[rosout][INFO] 2025-09-25 16:30:28,153: Client connected.  9 clients total.
+[rosout][INFO] 2025-09-25 16:30:29,164: [Client 6] Subscribed to /ctrl_cmd
+[rosout][INFO] 2025-09-25 16:30:29,175: [Client 8] Advertised service /Service_MoraiEventCmd.
+[rosout][INFO] 2025-09-25 16:30:31,244: Client connected.  10 clients total.
+[rospy.internal][INFO] 2025-09-25 16:31:04,651: topic[/image_jpeg/compressed] adding connection to [/rostopic_398_1758785464467], count 0
+[rospy.internal][INFO] 2025-09-25 16:31:07,877: topic[/image_jpeg/compressed] removing connection to /rostopic_398_1758785464467
+[rospy.internal][INFO] 2025-09-25 16:33:41,083: topic impl's ref count is zero, deleting topic /ctrl_cmd...
+[rosout][INFO] 2025-09-25 16:33:41,085: [Client 6] Unsubscribed from /ctrl_cmd
+[rosout][INFO] 2025-09-25 16:33:41,087: Client disconnected. 9 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,092: Client disconnected. 8 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,097: Client disconnected. 7 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,100: Client disconnected. 6 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,105: Client disconnected. 5 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,123: Client disconnected. 4 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,131: Client disconnected. 3 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,133: Client disconnected. 2 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,905: Client connected.  3 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,911: Client connected.  4 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,914: Client connected.  5 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,918: Client connected.  6 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,923: Client connected.  7 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,926: Client connected.  8 clients total.
+[rosout][INFO] 2025-09-25 16:33:41,930: Client connected.  9 clients total.
+[rosout][INFO] 2025-09-25 16:33:42,105: [Client 8] Unadvertised service /Service_MoraiEventCmd.
+[rosout][INFO] 2025-09-25 16:33:42,908: Client connected.  10 clients total.
+[rosout][INFO] 2025-09-25 16:33:43,910: [Client 17] Advertised service /Service_MoraiEventCmd.
+[rosout][INFO] 2025-09-25 16:33:43,914: [Client 10] Subscribed to /ctrl_cmd
+[rospy.internal][INFO] 2025-09-25 16:33:49,450: topic impl's ref count is zero, deleting topic /ctrl_cmd...
+[rosout][INFO] 2025-09-25 16:33:49,456: Client disconnected. 9 clients total.
+[rosout][INFO] 2025-09-25 16:33:49,460: Client disconnected. 8 clients total.
+[rosout][INFO] 2025-09-25 16:33:49,461: [Client 10] Unsubscribed from /ctrl_cmd
+[rosout][INFO] 2025-09-25 16:33:49,467: Client disconnected. 7 clients total.
+[rosout][INFO] 2025-09-25 16:33:49,472: Client disconnected. 6 clients total.
+[rosout][INFO] 2025-09-25 16:33:49,488: Client disconnected. 5 clients total.
+[rosout][INFO] 2025-09-25 16:33:49,492: Client disconnected. 4 clients total.
+[rosout][INFO] 2025-09-25 16:33:49,508: Client disconnected. 3 clients total.
+[rosout][INFO] 2025-09-25 16:33:49,515: Client disconnected. 2 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,353: Client connected.  3 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,356: Client connected.  4 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,360: Client connected.  5 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,367: Client connected.  6 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,371: Client connected.  7 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,374: Client connected.  8 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,378: Client connected.  9 clients total.
+[rosout][INFO] 2025-09-25 16:33:50,454: [Client 17] Unadvertised service /Service_MoraiEventCmd.
+[rosout][INFO] 2025-09-25 16:33:51,358: Client connected.  10 clients total.
+[rosout][INFO] 2025-09-25 16:33:52,357: [Client 18] Subscribed to /ctrl_cmd
+[rosout][INFO] 2025-09-25 16:33:52,361: [Client 25] Advertised service /Service_MoraiEventCmd.
+[rospy.internal][INFO] 2025-09-25 16:37:19,637: topic[/image_jpeg/compressed] adding connection to [/rostopic_626_1758785839462], count 0
+[rospy.internal][INFO] 2025-09-25 16:37:21,359: topic[/image_jpeg/compressed] removing connection to /rostopic_626_1758785839462
+[rospy.internal][INFO] 2025-09-25 16:37:55,031: topic[/image_jpeg/compressed] adding connection to [/rostopic_657_1758785874844], count 0
+[rospy.internal][INFO] 2025-09-25 16:37:59,411: topic[/image_jpeg/compressed] removing connection to /rostopic_657_1758785874844
+[rospy.internal][INFO] 2025-09-25 16:40:34,695: topic[/image_jpeg/compressed] adding connection to [/image_republisher_1758786034170119546], count 0
+[rospy.internal][INFO] 2025-09-25 16:40:54,162: topic[/image_jpeg/compressed] removing connection to /image_republisher_1758786034170119546
+[rospy.internal][INFO] 2025-09-25 16:41:05,481: topic[/image_jpeg/compressed] adding connection to [/image_republisher_1758786064885314174], count 0
+[rospy.internal][INFO] 2025-09-25 16:43:49,010: topic[/image_jpeg/compressed] removing connection to /image_republisher_1758786064885314174
+[rospy.internal][INFO] 2025-09-25 16:44:48,864: topic[/image_jpeg/compressed] adding connection to [/image_republisher_1758786288476234930], count 0
+[rospy.internal][INFO] 2025-09-25 16:51:30,994: topic impl's ref count is zero, deleting topic /ctrl_cmd...
+[rosout][INFO] 2025-09-25 16:51:31,012: Client disconnected. 9 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,030: [Client 18] Unsubscribed from /ctrl_cmd
+[rosout][INFO] 2025-09-25 16:51:31,043: Client disconnected. 8 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,081: Client disconnected. 7 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,158: Client disconnected. 6 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,207: Client disconnected. 5 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,250: Client disconnected. 4 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,333: Client disconnected. 3 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,888: Client disconnected. 2 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,906: Client disconnected. 1 clients total.
+[rosout][INFO] 2025-09-25 16:51:31,921: Client disconnected. 0 clients total.
+[rosout][INFO] 2025-09-25 16:51:32,067: [Client 25] Unadvertised service /Service_MoraiEventCmd.
+[rospy.internal][INFO] 2025-09-25 16:51:36,528: topic[/image_jpeg/compressed] removing connection to /image_republisher_1758786288476234930
+[rospy.internal][INFO] 2025-09-25 16:51:41,083: topic impl's ref count is zero, deleting topic /CollisionData...
+[rospy.internal][INFO] 2025-09-25 16:51:41,157: topic impl's ref count is zero, deleting topic /tf...
+[rospy.internal][INFO] 2025-09-25 16:51:41,207: topic impl's ref count is zero, deleting topic /Competition_topic...
+[rospy.internal][INFO] 2025-09-25 16:51:41,254: topic impl's ref count is zero, deleting topic /Ego_topic...
+[rospy.internal][INFO] 2025-09-25 16:51:41,341: topic impl's ref count is zero, deleting topic /Object_topic...
+[rospy.internal][INFO] 2025-09-25 16:51:41,968: topic impl's ref count is zero, deleting topic /image_jpeg/compressed...
+[rospy.core][INFO] 2025-09-25 16:51:47,770: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-09-25 16:51:47,777: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2025-09-25 16:51:47,778: signal-2
+[rospy.core][INFO] 2025-09-25 16:51:48,374: signal_shutdown [atexit]

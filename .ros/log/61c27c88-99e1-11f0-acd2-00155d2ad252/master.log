@@ -1,0 +1,470 @@
+[rosmaster.main][INFO] 2025-09-25 16:29:34,340: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2025-09-25 16:29:34,340: Starting ROS Master Node
+[xmlrpc][INFO] 2025-09-25 16:29:34,342: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2025-09-25 16:29:34,342: Started XML-RPC server [http://172.22.52.56:11311/]
+[xmlrpc][INFO] 2025-09-25 16:29:34,342: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2025-09-25 16:29:34,342: Master initialized: port[11311], uri[http://172.22.52.56:11311/]
+[rosmaster.master][INFO] 2025-09-25 16:29:34,427: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:29:34,428: +PARAM [/roslaunch/uris/host_172_22_52_56__34809] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:29:34,474: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:29:34,474: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:29:34,527: +SERVICE [/rosout/get_loggers] /rosout http://172.22.52.56:38719/
+[rosmaster.master][INFO] 2025-09-25 16:29:34,527: +SERVICE [/rosout/set_logger_level] /rosout http://172.22.52.56:38719/
+[rosmaster.master][INFO] 2025-09-25 16:29:34,529: +PUB [/rosout_agg] /rosout http://172.22.52.56:38719/
+[rosmaster.master][INFO] 2025-09-25 16:29:34,531: +SUB [/rosout] /rosout http://172.22.52.56:38719/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,163: +PARAM [/roslaunch/uris/host_172_22_52_56__44571] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,167: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/authenticate] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/port] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/address] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/retry_startup_delay] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/fragment_timeout] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/delay_between_messages] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/max_message_size] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/unregister_timeout] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/use_compression] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/websocket_ping_interval] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/websocket_ping_timeout] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/websocket_external_port] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/topics_glob] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/services_glob] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,168: +PARAM [/rosbridge_websocket/params_glob] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,169: +PARAM [/rosbridge_websocket/bson_only_mode] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,169: +PARAM [/rosapi/topics_glob] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,169: +PARAM [/rosapi/services_glob] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,169: +PARAM [/rosapi/params_glob] by /roslaunch
+[rosmaster.master][INFO] 2025-09-25 16:30:00,730: +PUB [/rosout] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,733: +SERVICE [/rosapi/get_loggers] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,734: +SERVICE [/rosapi/set_logger_level] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,737: +SERVICE [/rosapi/topics] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,738: +SERVICE [/rosapi/topics_for_type] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,739: +SERVICE [/rosapi/services] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,740: +SERVICE [/rosapi/services_for_type] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,741: +SERVICE [/rosapi/nodes] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,742: +SERVICE [/rosapi/node_details] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,743: +SERVICE [/rosapi/action_servers] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,744: +SERVICE [/rosapi/topic_type] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,745: +SERVICE [/rosapi/service_type] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,746: +SERVICE [/rosapi/publishers] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,747: +SERVICE [/rosapi/subscribers] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,748: +SERVICE [/rosapi/service_providers] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,749: +SERVICE [/rosapi/service_node] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,750: +SERVICE [/rosapi/service_host] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,751: +SERVICE [/rosapi/message_details] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,752: +SERVICE [/rosapi/service_request_details] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,753: +SERVICE [/rosapi/service_response_details] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,754: +SERVICE [/rosapi/set_param] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,755: +SERVICE [/rosapi/get_param] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,756: +SERVICE [/rosapi/has_param] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,757: +SERVICE [/rosapi/search_param] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,758: +SERVICE [/rosapi/delete_param] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,759: +SERVICE [/rosapi/get_param_names] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,760: +SERVICE [/rosapi/get_time] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,761: +SERVICE [/rosapi/topics_and_raw_types] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,762: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosapi
+[rosmaster.master][INFO] 2025-09-25 16:30:00,811: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/']
+[rosmaster.master][INFO] 2025-09-25 16:30:00,815: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:30:00,939: +PUB [/rosout] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,942: +SERVICE [/rosbridge_websocket/get_loggers] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,943: +SERVICE [/rosbridge_websocket/set_logger_level] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,955: +PUB [/client_count] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,957: +PUB [/connected_clients] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:00,960: +PARAM [/rosbridge_websocket/actual_port] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:00,963: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:01,012: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/']
+[rosmaster.master][INFO] 2025-09-25 16:30:01,015: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:30:01,018: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2025-09-25 16:30:27,152: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:27,156: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:27,159: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:27,162: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:27,164: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:27,167: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:27,171: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:27,173: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:28,154: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:28,531: +PUB [/clock] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:28,586: +PUB [/tf] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:28,680: +PUB [/Competition_topic] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:28,689: +PUB [/Object_topic] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:28,695: +PUB [/CollisionData] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:28,701: +PUB [/Ego_topic] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:29,163: +SUB [/ctrl_cmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:29,165: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:29,174: +SERVICE [/Service_MoraiEventCmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:30:29,176: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:31,245: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:30:32,285: +PUB [/image_jpeg/compressed] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:31:04,603: +PUB [/rosout] /rostopic_398_1758785464467 http://172.22.52.56:36935/
+[rosmaster.master][INFO] 2025-09-25 16:31:04,606: +SERVICE [/rostopic_398_1758785464467/get_loggers] /rostopic_398_1758785464467 http://172.22.52.56:36935/
+[rosmaster.master][INFO] 2025-09-25 16:31:04,607: +SERVICE [/rostopic_398_1758785464467/set_logger_level] /rostopic_398_1758785464467 http://172.22.52.56:36935/
+[rosmaster.master][INFO] 2025-09-25 16:31:04,630: +SUB [/image_jpeg/compressed] /rostopic_398_1758785464467 http://172.22.52.56:36935/
+[rosmaster.master][INFO] 2025-09-25 16:31:04,654: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:36935/']
+[rosmaster.master][INFO] 2025-09-25 16:31:04,656: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:36935/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:31:07,821: -SUB [/image_jpeg/compressed] /rostopic_398_1758785464467 http://172.22.52.56:36935/
+[rosmaster.master][INFO] 2025-09-25 16:31:07,821: -PUB [/rosout] /rostopic_398_1758785464467 http://172.22.52.56:36935/
+[rosmaster.master][INFO] 2025-09-25 16:31:07,821: -SERVICE [/rostopic_398_1758785464467/get_loggers] /rostopic_398_1758785464467 rosrpc://172.22.52.56:35137
+[rosmaster.master][INFO] 2025-09-25 16:31:07,821: -SERVICE [/rostopic_398_1758785464467/set_logger_level] /rostopic_398_1758785464467 rosrpc://172.22.52.56:35137
+[rosmaster.master][INFO] 2025-09-25 16:31:07,861: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/']
+[rosmaster.master][INFO] 2025-09-25 16:31:07,863: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:31:18,721: +PUB [/rosout] /rqt_gui_cpp_node_430 http://172.22.52.56:39085/
+[rosmaster.master][INFO] 2025-09-25 16:31:18,722: +SERVICE [/rqt_gui_cpp_node_430/get_loggers] /rqt_gui_cpp_node_430 http://172.22.52.56:39085/
+[rosmaster.master][INFO] 2025-09-25 16:31:18,722: +SERVICE [/rqt_gui_cpp_node_430/set_logger_level] /rqt_gui_cpp_node_430 http://172.22.52.56:39085/
+[rosmaster.master][INFO] 2025-09-25 16:31:18,783: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/']
+[rosmaster.master][INFO] 2025-09-25 16:31:18,785: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:31:19,188: +SUB [/camera/image_raw] /rqt_gui_cpp_node_430 http://172.22.52.56:39085/
+[rosmaster.master][INFO] 2025-09-25 16:32:13,973: -SUB [/camera/image_raw] /rqt_gui_cpp_node_430 http://172.22.52.56:39085/
+[rosmaster.master][INFO] 2025-09-25 16:32:24,839: +PUB [/rosout] /rqt_gui_cpp_node_470 http://172.22.52.56:40915/
+[rosmaster.master][INFO] 2025-09-25 16:32:24,839: +SERVICE [/rqt_gui_cpp_node_470/get_loggers] /rqt_gui_cpp_node_470 http://172.22.52.56:40915/
+[rosmaster.master][INFO] 2025-09-25 16:32:24,840: +SERVICE [/rqt_gui_cpp_node_470/set_logger_level] /rqt_gui_cpp_node_470 http://172.22.52.56:40915/
+[rosmaster.master][INFO] 2025-09-25 16:32:24,927: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:32:24,928: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:32:25,009: +SUB [/camera/image_raw] /rqt_gui_cpp_node_470 http://172.22.52.56:40915/
+[rosmaster.master][INFO] 2025-09-25 16:33:03,466: -SUB [/camera/image_raw] /rqt_gui_cpp_node_470 http://172.22.52.56:40915/
+[rosmaster.master][INFO] 2025-09-25 16:33:16,826: +PARAM [/lane_tracking/kp] by /rosparam-510
+[rosmaster.master][INFO] 2025-09-25 16:33:16,958: +PARAM [/lane_tracking/roi_y_ratio] by /rosparam-513
+[rosmaster.master][INFO] 2025-09-25 16:33:18,178: +PARAM [/lane_tracking/debug] by /rosparam-516
+[rosmaster.master][INFO] 2025-09-25 16:33:31,151: +PUB [/rosout] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:31,156: +SERVICE [/lane_tracking_node/get_loggers] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:31,157: +SERVICE [/lane_tracking_node/set_logger_level] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:31,169: +PUB [/lane/center_offset] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:31,170: +PUB [/lane/steering_angle] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:31,171: +PUB [/lane_overlay] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:31,174: +SUB [/camera/image_raw] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:31,176: +CACHEDPARAM [/rosout_disable_topics_generation] by /lane_tracking_node
+[rosmaster.master][INFO] 2025-09-25 16:33:31,180: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:46603/']
+[rosmaster.master][INFO] 2025-09-25 16:33:31,181: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:46603/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:33:36,706: -SUB [/camera/image_raw] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:36,706: -PUB [/rosout] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:36,706: -PUB [/lane/center_offset] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:36,706: -PUB [/lane/steering_angle] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:36,706: -PUB [/lane_overlay] /lane_tracking_node http://172.22.52.56:46603/
+[rosmaster.master][INFO] 2025-09-25 16:33:36,706: -SERVICE [/lane_tracking_node/get_loggers] /lane_tracking_node rosrpc://172.22.52.56:41479
+[rosmaster.master][INFO] 2025-09-25 16:33:36,707: -SERVICE [/lane_tracking_node/set_logger_level] /lane_tracking_node rosrpc://172.22.52.56:41479
+[rosmaster.master][INFO] 2025-09-25 16:33:36,793: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:33:36,795: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:33:41,084: -SUB [/ctrl_cmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:33:41,087: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,088: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,094: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,098: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,102: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,121: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,125: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,132: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,134: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,906: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,912: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,915: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,919: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,924: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,927: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:41,931: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:42,100: -SERVICE [/Service_MoraiEventCmd] /rosbridge_websocket rosrpc://172.22.52.56:36837
+[rosmaster.master][INFO] 2025-09-25 16:33:42,106: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:42,909: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:43,909: +SERVICE [/Service_MoraiEventCmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:33:43,912: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:43,914: +SUB [/ctrl_cmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:33:43,915: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,458: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,460: -SUB [/ctrl_cmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:33:49,463: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,465: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,468: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,478: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,489: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,493: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,512: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:49,516: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,354: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,357: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,361: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,368: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,372: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,375: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,379: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:50,453: -SERVICE [/Service_MoraiEventCmd] /rosbridge_websocket rosrpc://172.22.52.56:36837
+[rosmaster.master][INFO] 2025-09-25 16:33:50,456: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:51,359: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:52,357: +SUB [/ctrl_cmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:33:52,359: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:33:52,361: +SERVICE [/Service_MoraiEventCmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:33:52,362: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:34:13,746: +PUB [/rosout] /rqt_gui_cpp_node_586 http://172.22.52.56:42379/
+[rosmaster.master][INFO] 2025-09-25 16:34:13,746: +SERVICE [/rqt_gui_cpp_node_586/get_loggers] /rqt_gui_cpp_node_586 http://172.22.52.56:42379/
+[rosmaster.master][INFO] 2025-09-25 16:34:13,747: +SERVICE [/rqt_gui_cpp_node_586/set_logger_level] /rqt_gui_cpp_node_586 http://172.22.52.56:42379/
+[rosmaster.master][INFO] 2025-09-25 16:34:13,779: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:42379/']
+[rosmaster.master][INFO] 2025-09-25 16:34:13,781: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:42379/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:34:13,899: +SUB [/camera/image_raw] /rqt_gui_cpp_node_586 http://172.22.52.56:42379/
+[rosmaster.master][INFO] 2025-09-25 16:35:22,258: -SUB [/camera/image_raw] /rqt_gui_cpp_node_586 http://172.22.52.56:42379/
+[rosmaster.master][INFO] 2025-09-25 16:35:22,814: -PUB [/rosout] /rqt_gui_cpp_node_586 http://172.22.52.56:42379/
+[rosmaster.master][INFO] 2025-09-25 16:35:22,816: -SERVICE [/rqt_gui_cpp_node_586/get_loggers] /rqt_gui_cpp_node_586 rosrpc://172.22.52.56:53173
+[rosmaster.master][INFO] 2025-09-25 16:35:22,820: -SERVICE [/rqt_gui_cpp_node_586/set_logger_level] /rqt_gui_cpp_node_586 rosrpc://172.22.52.56:53173
+[rosmaster.master][INFO] 2025-09-25 16:35:22,822: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:35:22,824: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:37:19,602: +PUB [/rosout] /rostopic_626_1758785839462 http://172.22.52.56:41409/
+[rosmaster.master][INFO] 2025-09-25 16:37:19,606: +SERVICE [/rostopic_626_1758785839462/get_loggers] /rostopic_626_1758785839462 http://172.22.52.56:41409/
+[rosmaster.master][INFO] 2025-09-25 16:37:19,608: +SERVICE [/rostopic_626_1758785839462/set_logger_level] /rostopic_626_1758785839462 http://172.22.52.56:41409/
+[rosmaster.master][INFO] 2025-09-25 16:37:19,609: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:41409/']
+[rosmaster.master][INFO] 2025-09-25 16:37:19,611: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:41409/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:37:19,630: +SUB [/image_jpeg/compressed] /rostopic_626_1758785839462 http://172.22.52.56:41409/
+[rosmaster.master][INFO] 2025-09-25 16:37:21,305: -SUB [/image_jpeg/compressed] /rostopic_626_1758785839462 http://172.22.52.56:41409/
+[rosmaster.master][INFO] 2025-09-25 16:37:21,306: -PUB [/rosout] /rostopic_626_1758785839462 http://172.22.52.56:41409/
+[rosmaster.master][INFO] 2025-09-25 16:37:21,306: -SERVICE [/rostopic_626_1758785839462/get_loggers] /rostopic_626_1758785839462 rosrpc://172.22.52.56:35649
+[rosmaster.master][INFO] 2025-09-25 16:37:21,306: -SERVICE [/rostopic_626_1758785839462/set_logger_level] /rostopic_626_1758785839462 rosrpc://172.22.52.56:35649
+[rosmaster.master][INFO] 2025-09-25 16:37:21,313: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:37:21,314: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:37:54,989: +PUB [/rosout] /rostopic_657_1758785874844 http://172.22.52.56:44507/
+[rosmaster.master][INFO] 2025-09-25 16:37:54,990: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:44507/']
+[rosmaster.master][INFO] 2025-09-25 16:37:54,991: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:44507/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:37:54,996: +SERVICE [/rostopic_657_1758785874844/get_loggers] /rostopic_657_1758785874844 http://172.22.52.56:44507/
+[rosmaster.master][INFO] 2025-09-25 16:37:54,997: +SERVICE [/rostopic_657_1758785874844/set_logger_level] /rostopic_657_1758785874844 http://172.22.52.56:44507/
+[rosmaster.master][INFO] 2025-09-25 16:37:55,020: +SUB [/image_jpeg/compressed] /rostopic_657_1758785874844 http://172.22.52.56:44507/
+[rosmaster.master][INFO] 2025-09-25 16:37:59,373: -SUB [/image_jpeg/compressed] /rostopic_657_1758785874844 http://172.22.52.56:44507/
+[rosmaster.master][INFO] 2025-09-25 16:37:59,374: -PUB [/rosout] /rostopic_657_1758785874844 http://172.22.52.56:44507/
+[rosmaster.master][INFO] 2025-09-25 16:37:59,374: -SERVICE [/rostopic_657_1758785874844/get_loggers] /rostopic_657_1758785874844 rosrpc://172.22.52.56:42183
+[rosmaster.master][INFO] 2025-09-25 16:37:59,374: -SERVICE [/rostopic_657_1758785874844/set_logger_level] /rostopic_657_1758785874844 rosrpc://172.22.52.56:42183
+[rosmaster.master][INFO] 2025-09-25 16:37:59,400: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:37:59,402: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:38:06,463: +PUB [/rosout] /rqt_gui_cpp_node_688 http://172.22.52.56:43877/
+[rosmaster.master][INFO] 2025-09-25 16:38:06,464: +SERVICE [/rqt_gui_cpp_node_688/get_loggers] /rqt_gui_cpp_node_688 http://172.22.52.56:43877/
+[rosmaster.master][INFO] 2025-09-25 16:38:06,465: +SERVICE [/rqt_gui_cpp_node_688/set_logger_level] /rqt_gui_cpp_node_688 http://172.22.52.56:43877/
+[rosmaster.master][INFO] 2025-09-25 16:38:06,517: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:43877/']
+[rosmaster.master][INFO] 2025-09-25 16:38:06,519: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:43877/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:38:06,687: +SUB [/camera/image_raw] /rqt_gui_cpp_node_688 http://172.22.52.56:43877/
+[rosmaster.master][INFO] 2025-09-25 16:40:32,098: -SUB [/camera/image_raw] /rqt_gui_cpp_node_688 http://172.22.52.56:43877/
+[rosmaster.master][INFO] 2025-09-25 16:40:32,644: -PUB [/rosout] /rqt_gui_cpp_node_688 http://172.22.52.56:43877/
+[rosmaster.master][INFO] 2025-09-25 16:40:32,646: -SERVICE [/rqt_gui_cpp_node_688/get_loggers] /rqt_gui_cpp_node_688 rosrpc://172.22.52.56:33713
+[rosmaster.master][INFO] 2025-09-25 16:40:32,649: -SERVICE [/rqt_gui_cpp_node_688/set_logger_level] /rqt_gui_cpp_node_688 rosrpc://172.22.52.56:33713
+[rosmaster.master][INFO] 2025-09-25 16:40:32,686: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:40:32,689: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:40:34,176: +PUB [/rosout] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,178: +SERVICE [/image_republisher_1758786034170119546/get_loggers] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,180: +SERVICE [/image_republisher_1758786034170119546/set_logger_level] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,191: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:39297/']
+[rosmaster.master][INFO] 2025-09-25 16:40:34,194: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:39297/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:40:34,261: +PUB [/camera/image_raw] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,481: +SUB [/image_jpeg/compressed] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,484: +SERVICE [/image_republisher_1758786034170119546/compressed/set_parameters] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,486: +PUB [/image_republisher_1758786034170119546/compressed/parameter_descriptions] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,488: +PUB [/image_republisher_1758786034170119546/compressed/parameter_updates] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:34,491: +PARAM [/image_republisher_1758786034170119546/compressed/mode] by /image_republisher_1758786034170119546
+[rosmaster.master][INFO] 2025-09-25 16:40:34,492: +PARAM [/image_republisher_1758786034170119546/compressed/mode] by /image_republisher_1758786034170119546
+[rosmaster.master][INFO] 2025-09-25 16:40:54,119: -PUB [/rosout] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:54,121: -PUB [/camera/image_raw] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:54,123: -PUB [/image_republisher_1758786034170119546/compressed/parameter_descriptions] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:54,125: -PUB [/image_republisher_1758786034170119546/compressed/parameter_updates] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:54,126: -SUB [/image_jpeg/compressed] /image_republisher_1758786034170119546 http://172.22.52.56:39297/
+[rosmaster.master][INFO] 2025-09-25 16:40:54,128: -SERVICE [/image_republisher_1758786034170119546/get_loggers] /image_republisher_1758786034170119546 rosrpc://172.22.52.56:40459
+[rosmaster.master][INFO] 2025-09-25 16:40:54,129: -SERVICE [/image_republisher_1758786034170119546/set_logger_level] /image_republisher_1758786034170119546 rosrpc://172.22.52.56:40459
+[rosmaster.master][INFO] 2025-09-25 16:40:54,131: -SERVICE [/image_republisher_1758786034170119546/compressed/set_parameters] /image_republisher_1758786034170119546 rosrpc://172.22.52.56:40459
+[rosmaster.master][INFO] 2025-09-25 16:40:54,150: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:40:54,153: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:41:04,891: +PUB [/rosout] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:04,894: +SERVICE [/image_republisher_1758786064885314174/get_loggers] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:04,896: +SERVICE [/image_republisher_1758786064885314174/set_logger_level] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:04,984: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/']
+[rosmaster.master][INFO] 2025-09-25 16:41:04,987: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:41:04,989: +PUB [/camera/image_raw] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:05,285: +SUB [/image_jpeg/compressed] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:05,289: +SERVICE [/image_republisher_1758786064885314174/compressed/set_parameters] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:05,292: +PUB [/image_republisher_1758786064885314174/compressed/parameter_descriptions] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:05,294: +PUB [/image_republisher_1758786064885314174/compressed/parameter_updates] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:41:05,297: +PARAM [/image_republisher_1758786064885314174/compressed/mode] by /image_republisher_1758786064885314174
+[rosmaster.master][INFO] 2025-09-25 16:41:05,299: +PARAM [/image_republisher_1758786064885314174/compressed/mode] by /image_republisher_1758786064885314174
+[rosmaster.master][INFO] 2025-09-25 16:41:47,506: +PUB [/rosout] /rqt_gui_cpp_node_841 http://172.22.52.56:37143/
+[rosmaster.master][INFO] 2025-09-25 16:41:47,508: +SERVICE [/rqt_gui_cpp_node_841/get_loggers] /rqt_gui_cpp_node_841 http://172.22.52.56:37143/
+[rosmaster.master][INFO] 2025-09-25 16:41:47,511: +SERVICE [/rqt_gui_cpp_node_841/set_logger_level] /rqt_gui_cpp_node_841 http://172.22.52.56:37143/
+[rosmaster.master][INFO] 2025-09-25 16:41:47,522: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/', 'http://172.22.52.56:37143/']
+[rosmaster.master][INFO] 2025-09-25 16:41:47,525: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/', 'http://172.22.52.56:37143/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:41:47,898: +SUB [/camera/image_raw] /rqt_gui_cpp_node_841 http://172.22.52.56:37143/
+[rosmaster.master][INFO] 2025-09-25 16:42:45,155: -SUB [/camera/image_raw] /rqt_gui_cpp_node_841 http://172.22.52.56:37143/
+[rosmaster.master][INFO] 2025-09-25 16:42:45,690: -PUB [/rosout] /rqt_gui_cpp_node_841 http://172.22.52.56:37143/
+[rosmaster.master][INFO] 2025-09-25 16:42:45,693: -SERVICE [/rqt_gui_cpp_node_841/get_loggers] /rqt_gui_cpp_node_841 rosrpc://172.22.52.56:36915
+[rosmaster.master][INFO] 2025-09-25 16:42:45,695: -SERVICE [/rqt_gui_cpp_node_841/set_logger_level] /rqt_gui_cpp_node_841 rosrpc://172.22.52.56:36915
+[rosmaster.master][INFO] 2025-09-25 16:42:45,699: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/']
+[rosmaster.master][INFO] 2025-09-25 16:42:45,703: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:42:49,416: +PUB [/rosout] /rqt_gui_cpp_node_877 http://172.22.52.56:33059/
+[rosmaster.master][INFO] 2025-09-25 16:42:49,417: +SERVICE [/rqt_gui_cpp_node_877/get_loggers] /rqt_gui_cpp_node_877 http://172.22.52.56:33059/
+[rosmaster.master][INFO] 2025-09-25 16:42:49,419: +SERVICE [/rqt_gui_cpp_node_877/set_logger_level] /rqt_gui_cpp_node_877 http://172.22.52.56:33059/
+[rosmaster.master][INFO] 2025-09-25 16:42:49,511: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/', 'http://172.22.52.56:33059/']
+[rosmaster.master][INFO] 2025-09-25 16:42:49,514: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/', 'http://172.22.52.56:33059/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:42:49,738: +SUB [/camera/image_raw] /rqt_gui_cpp_node_877 http://172.22.52.56:33059/
+[rosmaster.master][INFO] 2025-09-25 16:43:05,450: -SUB [/camera/image_raw] /rqt_gui_cpp_node_877 http://172.22.52.56:33059/
+[rosmaster.master][INFO] 2025-09-25 16:43:05,963: -PUB [/rosout] /rqt_gui_cpp_node_877 http://172.22.52.56:33059/
+[rosmaster.master][INFO] 2025-09-25 16:43:05,965: -SERVICE [/rqt_gui_cpp_node_877/get_loggers] /rqt_gui_cpp_node_877 rosrpc://172.22.52.56:50577
+[rosmaster.master][INFO] 2025-09-25 16:43:05,966: -SERVICE [/rqt_gui_cpp_node_877/set_logger_level] /rqt_gui_cpp_node_877 rosrpc://172.22.52.56:50577
+[rosmaster.master][INFO] 2025-09-25 16:43:06,059: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/']
+[rosmaster.master][INFO] 2025-09-25 16:43:06,062: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:33191/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:43:48,964: -PUB [/rosout] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:43:48,966: -PUB [/camera/image_raw] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:43:48,967: -PUB [/image_republisher_1758786064885314174/compressed/parameter_descriptions] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:43:48,967: -PUB [/image_republisher_1758786064885314174/compressed/parameter_updates] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:43:48,968: -SUB [/image_jpeg/compressed] /image_republisher_1758786064885314174 http://172.22.52.56:33191/
+[rosmaster.master][INFO] 2025-09-25 16:43:48,969: -SERVICE [/image_republisher_1758786064885314174/get_loggers] /image_republisher_1758786064885314174 rosrpc://172.22.52.56:52071
+[rosmaster.master][INFO] 2025-09-25 16:43:48,970: -SERVICE [/image_republisher_1758786064885314174/set_logger_level] /image_republisher_1758786064885314174 rosrpc://172.22.52.56:52071
+[rosmaster.master][INFO] 2025-09-25 16:43:48,971: -SERVICE [/image_republisher_1758786064885314174/compressed/set_parameters] /image_republisher_1758786064885314174 rosrpc://172.22.52.56:52071
+[rosmaster.master][INFO] 2025-09-25 16:43:48,977: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:43:48,980: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:43:54,562: +PUB [/rosout] /rqt_gui_cpp_node_913 http://172.22.52.56:46081/
+[rosmaster.master][INFO] 2025-09-25 16:43:54,564: +SERVICE [/rqt_gui_cpp_node_913/get_loggers] /rqt_gui_cpp_node_913 http://172.22.52.56:46081/
+[rosmaster.master][INFO] 2025-09-25 16:43:54,566: +SERVICE [/rqt_gui_cpp_node_913/set_logger_level] /rqt_gui_cpp_node_913 http://172.22.52.56:46081/
+[rosmaster.master][INFO] 2025-09-25 16:43:54,593: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:46081/']
+[rosmaster.master][INFO] 2025-09-25 16:43:54,596: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:46081/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:43:54,897: +SUB [/camera/image_raw] /rqt_gui_cpp_node_913 http://172.22.52.56:46081/
+[rosmaster.master][INFO] 2025-09-25 16:44:10,597: -SUB [/camera/image_raw] /rqt_gui_cpp_node_913 http://172.22.52.56:46081/
+[rosmaster.master][INFO] 2025-09-25 16:44:11,038: -PUB [/rosout] /rqt_gui_cpp_node_913 http://172.22.52.56:46081/
+[rosmaster.master][INFO] 2025-09-25 16:44:11,039: -SERVICE [/rqt_gui_cpp_node_913/get_loggers] /rqt_gui_cpp_node_913 rosrpc://172.22.52.56:37657
+[rosmaster.master][INFO] 2025-09-25 16:44:11,041: -SERVICE [/rqt_gui_cpp_node_913/set_logger_level] /rqt_gui_cpp_node_913 rosrpc://172.22.52.56:37657
+[rosmaster.master][INFO] 2025-09-25 16:44:11,041: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:44:11,044: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:44:48,481: +PUB [/rosout] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,482: +SERVICE [/image_republisher_1758786288476234930/get_loggers] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,483: +SERVICE [/image_republisher_1758786288476234930/set_logger_level] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,528: +PUB [/camera/image_raw] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,542: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/']
+[rosmaster.master][INFO] 2025-09-25 16:44:48,545: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:44:48,670: +SUB [/image_jpeg/compressed] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,672: +SERVICE [/image_republisher_1758786288476234930/compressed/set_parameters] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,673: +PUB [/image_republisher_1758786288476234930/compressed/parameter_descriptions] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,675: +PUB [/image_republisher_1758786288476234930/compressed/parameter_updates] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:44:48,677: +PARAM [/image_republisher_1758786288476234930/compressed/mode] by /image_republisher_1758786288476234930
+[rosmaster.master][INFO] 2025-09-25 16:44:48,679: +PARAM [/image_republisher_1758786288476234930/compressed/mode] by /image_republisher_1758786288476234930
+[rosmaster.master][INFO] 2025-09-25 16:44:58,012: +PUB [/rosout] /rqt_gui_cpp_node_968 http://172.22.52.56:46029/
+[rosmaster.master][INFO] 2025-09-25 16:44:58,013: +SERVICE [/rqt_gui_cpp_node_968/get_loggers] /rqt_gui_cpp_node_968 http://172.22.52.56:46029/
+[rosmaster.master][INFO] 2025-09-25 16:44:58,015: +SERVICE [/rqt_gui_cpp_node_968/set_logger_level] /rqt_gui_cpp_node_968 http://172.22.52.56:46029/
+[rosmaster.master][INFO] 2025-09-25 16:44:58,069: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:46029/']
+[rosmaster.master][INFO] 2025-09-25 16:44:58,071: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:46029/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:44:58,282: +SUB [/camera/image_raw] /rqt_gui_cpp_node_968 http://172.22.52.56:46029/
+[rosmaster.master][INFO] 2025-09-25 16:46:58,342: +PARAM [/lane_tracking/kp] by /rosparam-1083
+[rosmaster.master][INFO] 2025-09-25 16:46:58,727: +PARAM [/lane_tracking/roi_y_ratio] by /rosparam-1086
+[rosmaster.master][INFO] 2025-09-25 16:46:59,133: +PARAM [/lane_tracking/debug] by /rosparam-1089
+[rosmaster.master][INFO] 2025-09-25 16:47:04,575: +PUB [/rosout] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:47:04,586: +SERVICE [/lane_tracking_node/get_loggers] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:47:04,590: +SERVICE [/lane_tracking_node/set_logger_level] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:47:04,618: +PUB [/lane/center_offset] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:47:04,621: +PUB [/lane/steering_angle] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:47:04,625: +PUB [/lane_overlay] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:47:04,630: +SUB [/camera/image_raw] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:47:04,636: +CACHEDPARAM [/rosout_disable_topics_generation] by /lane_tracking_node
+[rosmaster.master][INFO] 2025-09-25 16:47:04,639: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:46029/', 'http://172.22.52.56:40615/']
+[rosmaster.master][INFO] 2025-09-25 16:47:04,643: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:46029/', 'http://172.22.52.56:40615/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:47:43,565: -SUB [/camera/image_raw] /rqt_gui_cpp_node_968 http://172.22.52.56:46029/
+[rosmaster.master][INFO] 2025-09-25 16:47:44,300: -PUB [/rosout] /rqt_gui_cpp_node_968 http://172.22.52.56:46029/
+[rosmaster.master][INFO] 2025-09-25 16:47:44,302: -SERVICE [/rqt_gui_cpp_node_968/get_loggers] /rqt_gui_cpp_node_968 rosrpc://172.22.52.56:58991
+[rosmaster.master][INFO] 2025-09-25 16:47:44,304: -SERVICE [/rqt_gui_cpp_node_968/set_logger_level] /rqt_gui_cpp_node_968 rosrpc://172.22.52.56:58991
+[rosmaster.master][INFO] 2025-09-25 16:47:44,383: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/']
+[rosmaster.master][INFO] 2025-09-25 16:47:44,386: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:47:52,356: +PUB [/rosout] /rqt_gui_cpp_node_1134 http://172.22.52.56:37961/
+[rosmaster.master][INFO] 2025-09-25 16:47:52,358: +SERVICE [/rqt_gui_cpp_node_1134/get_loggers] /rqt_gui_cpp_node_1134 http://172.22.52.56:37961/
+[rosmaster.master][INFO] 2025-09-25 16:47:52,361: +SERVICE [/rqt_gui_cpp_node_1134/set_logger_level] /rqt_gui_cpp_node_1134 http://172.22.52.56:37961/
+[rosmaster.master][INFO] 2025-09-25 16:47:52,409: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/', 'http://172.22.52.56:37961/']
+[rosmaster.master][INFO] 2025-09-25 16:47:52,411: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/', 'http://172.22.52.56:37961/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:47:52,952: +SUB [/lane_overlay] /rqt_gui_cpp_node_1134 http://172.22.52.56:37961/
+[rosmaster.master][INFO] 2025-09-25 16:50:48,322: -SUB [/lane_overlay] /rqt_gui_cpp_node_1134 http://172.22.52.56:37961/
+[rosmaster.master][INFO] 2025-09-25 16:50:48,898: -PUB [/rosout] /rqt_gui_cpp_node_1134 http://172.22.52.56:37961/
+[rosmaster.master][INFO] 2025-09-25 16:50:48,901: -SERVICE [/rqt_gui_cpp_node_1134/get_loggers] /rqt_gui_cpp_node_1134 rosrpc://172.22.52.56:37609
+[rosmaster.master][INFO] 2025-09-25 16:50:48,904: -SERVICE [/rqt_gui_cpp_node_1134/set_logger_level] /rqt_gui_cpp_node_1134 rosrpc://172.22.52.56:37609
+[rosmaster.master][INFO] 2025-09-25 16:50:48,905: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/']
+[rosmaster.master][INFO] 2025-09-25 16:50:48,908: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:50:52,853: +PUB [/rosout] /rostopic_1187_1758786652668 http://172.22.52.56:43635/
+[rosmaster.master][INFO] 2025-09-25 16:50:52,860: +SERVICE [/rostopic_1187_1758786652668/get_loggers] /rostopic_1187_1758786652668 http://172.22.52.56:43635/
+[rosmaster.master][INFO] 2025-09-25 16:50:52,863: +SERVICE [/rostopic_1187_1758786652668/set_logger_level] /rostopic_1187_1758786652668 http://172.22.52.56:43635/
+[rosmaster.master][INFO] 2025-09-25 16:50:52,907: +SUB [/lane_overlay] /rostopic_1187_1758786652668 http://172.22.52.56:43635/
+[rosmaster.master][INFO] 2025-09-25 16:50:52,922: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/', 'http://172.22.52.56:43635/']
+[rosmaster.master][INFO] 2025-09-25 16:50:52,926: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/', 'http://172.22.52.56:43635/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:50:56,978: -SUB [/lane_overlay] /rostopic_1187_1758786652668 http://172.22.52.56:43635/
+[rosmaster.master][INFO] 2025-09-25 16:50:56,979: -PUB [/rosout] /rostopic_1187_1758786652668 http://172.22.52.56:43635/
+[rosmaster.master][INFO] 2025-09-25 16:50:56,979: -SERVICE [/rostopic_1187_1758786652668/get_loggers] /rostopic_1187_1758786652668 rosrpc://172.22.52.56:36049
+[rosmaster.master][INFO] 2025-09-25 16:50:56,979: -SERVICE [/rostopic_1187_1758786652668/set_logger_level] /rostopic_1187_1758786652668 rosrpc://172.22.52.56:36049
+[rosmaster.master][INFO] 2025-09-25 16:50:57,040: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/']
+[rosmaster.master][INFO] 2025-09-25 16:50:57,042: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:36081/', 'http://172.22.52.56:40615/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:51:31,010: -SUB [/ctrl_cmd] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:31,016: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,040: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,046: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,096: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,162: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,213: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,276: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,341: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,898: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,914: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:31,929: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:32,066: -SERVICE [/Service_MoraiEventCmd] /rosbridge_websocket rosrpc://172.22.52.56:36837
+[rosmaster.master][INFO] 2025-09-25 16:51:32,068: +CACHEDPARAM [/rosout_disable_topics_generation] by /rosbridge_websocket
+[rosmaster.master][INFO] 2025-09-25 16:51:36,364: -PUB [/rosout] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:51:36,364: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:40615/']
+[rosmaster.master][INFO] 2025-09-25 16:51:36,365: -PUB [/camera/image_raw] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:51:36,366: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:44927/', 'http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:40615/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:51:36,366: -PUB [/image_republisher_1758786288476234930/compressed/parameter_descriptions] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:51:36,367: publisherUpdate[/camera/image_raw] -> http://172.22.52.56:40615/ []
+[rosmaster.master][INFO] 2025-09-25 16:51:36,368: -PUB [/image_republisher_1758786288476234930/compressed/parameter_updates] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:51:36,368: -SUB [/image_jpeg/compressed] /image_republisher_1758786288476234930 http://172.22.52.56:36081/
+[rosmaster.master][INFO] 2025-09-25 16:51:36,369: -SERVICE [/image_republisher_1758786288476234930/get_loggers] /image_republisher_1758786288476234930 rosrpc://172.22.52.56:38049
+[rosmaster.master][INFO] 2025-09-25 16:51:36,369: publisherUpdate[/camera/image_raw] -> http://172.22.52.56:40615/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:51:36,370: -SERVICE [/image_republisher_1758786288476234930/set_logger_level] /image_republisher_1758786288476234930 rosrpc://172.22.52.56:38049
+[rosmaster.master][INFO] 2025-09-25 16:51:36,371: -SERVICE [/image_republisher_1758786288476234930/compressed/set_parameters] /image_republisher_1758786288476234930 rosrpc://172.22.52.56:38049
+[rosmaster.master][INFO] 2025-09-25 16:51:41,084: -PUB [/CollisionData] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:41,158: -PUB [/tf] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:41,208: -PUB [/Competition_topic] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:41,254: -PUB [/Ego_topic] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:41,342: -PUB [/Object_topic] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:41,969: -PUB [/image_jpeg/compressed] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:47,772: -PUB [/rosout] /rosapi http://172.22.52.56:44927/
+[rosmaster.master][INFO] 2025-09-25 16:51:47,772: -SERVICE [/rosapi/get_loggers] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,772: -SERVICE [/rosapi/set_logger_level] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,772: -SERVICE [/rosapi/topics] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,773: -SERVICE [/rosapi/topics_for_type] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,773: -SERVICE [/rosapi/services] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,773: -SERVICE [/rosapi/services_for_type] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -SERVICE [/rosapi/nodes] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -SERVICE [/rosapi/node_details] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -SERVICE [/rosapi/action_servers] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -SERVICE [/rosapi/topic_type] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -SERVICE [/rosapi/service_type] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -SERVICE [/rosapi/publishers] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -PUB [/rosout] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:47,774: -SERVICE [/rosapi/subscribers] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,775: -PUB [/client_count] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:47,775: -SERVICE [/rosapi/service_providers] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,775: -PUB [/connected_clients] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:47,775: -PUB [/clock] /rosbridge_websocket http://172.22.52.56:39519/
+[rosmaster.master][INFO] 2025-09-25 16:51:47,775: -SERVICE [/rosapi/service_node] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,776: -SERVICE [/rosapi/service_host] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,776: -SERVICE [/rosapi/message_details] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,776: -SERVICE [/rosapi/service_request_details] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,776: -SERVICE [/rosbridge_websocket/get_loggers] /rosbridge_websocket rosrpc://172.22.52.56:36837
+[rosmaster.master][INFO] 2025-09-25 16:51:47,776: -SERVICE [/rosbridge_websocket/set_logger_level] /rosbridge_websocket rosrpc://172.22.52.56:36837
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/service_response_details] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/set_param] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/get_param] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/has_param] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/search_param] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/delete_param] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/get_param_names] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/get_time] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,777: -SERVICE [/rosapi/topics_and_raw_types] /rosapi rosrpc://172.22.52.56:43687
+[rosmaster.master][INFO] 2025-09-25 16:51:47,802: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:40615/']
+[rosmaster.master][INFO] 2025-09-25 16:51:47,803: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:39519/', 'http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:40615/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:51:47,803: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:40615/']
+[rosmaster.master][INFO] 2025-09-25 16:51:47,804: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:39085/', 'http://172.22.52.56:40915/', 'http://172.22.52.56:40615/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:51:52,023: -SUB [/camera/image_raw] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:51:52,023: -PUB [/rosout] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:51:52,023: -PUB [/lane/center_offset] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:51:52,023: -PUB [/lane/steering_angle] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:51:52,023: -PUB [/lane_overlay] /lane_tracking_node http://172.22.52.56:40615/
+[rosmaster.master][INFO] 2025-09-25 16:51:52,023: -SERVICE [/lane_tracking_node/get_loggers] /lane_tracking_node rosrpc://172.22.52.56:35565
+[rosmaster.master][INFO] 2025-09-25 16:51:52,023: -SERVICE [/lane_tracking_node/set_logger_level] /lane_tracking_node rosrpc://172.22.52.56:35565
+[rosmaster.master][INFO] 2025-09-25 16:51:52,113: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']
+[rosmaster.master][INFO] 2025-09-25 16:51:52,115: publisherUpdate[/rosout] -> http://172.22.52.56:38719/ ['http://172.22.52.56:39085/', 'http://172.22.52.56:40915/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-25 16:51:56,627: -PUB [/rosout_agg] /rosout http://172.22.52.56:38719/
+[rosmaster.master][INFO] 2025-09-25 16:51:56,629: -SUB [/rosout] /rosout http://172.22.52.56:38719/
+[rosmaster.master][INFO] 2025-09-25 16:51:56,630: -SERVICE [/rosout/get_loggers] /rosout rosrpc://172.22.52.56:49417
+[rosmaster.master][INFO] 2025-09-25 16:51:56,630: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://172.22.52.56:49417
+[rosmaster.master][INFO] 2025-09-25 16:51:56,631: -CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.main][INFO] 2025-09-25 16:51:56,729: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2025-09-25 16:51:56,729: stopping master...
+[rospy.core][INFO] 2025-09-25 16:51:56,730: signal_shutdown [atexit]

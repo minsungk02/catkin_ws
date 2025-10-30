@@ -1,0 +1,6 @@
+[user]
+	name = hyeongseon
+	email = skgudtjs1@gmail.com
+[core]
+	autocrlf = input
+	filemode = false

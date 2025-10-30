@@ -1,0 +1,11 @@
+
+
+1757646769.876460532  Node Startup
+1757647170.855878591 INFO /talker_14574_1757647170716 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647170.8545258
+1757647171.859261751 INFO /talker_14574_1757647170716 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647171.8559632
+1757647172.858109474 INFO /talker_14574_1757647170716 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647172.8560514
+1757647173.858288288 INFO /talker_14574_1757647170716 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647173.8557887
+1757647174.858065128 INFO /talker_14574_1757647170716 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647174.855952
+1757647717.693553686 INFO /talker_15877_1757647717553 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647717.6920412
+1757647718.695250272 INFO /talker_15877_1757647717553 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647718.6934156
+1757647719.695772647 INFO /talker_15877_1757647717553 [talker.py:48(talker)] [topics: /chatter, /rosout] hello MORAI 1757647719.693333

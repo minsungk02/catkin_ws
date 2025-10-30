@@ -1,0 +1,49 @@
+[rospy.client][INFO] 2025-09-12 14:58:05,705: init_node, name[/rosbridge_websocket], pid[15987]
+[xmlrpc][INFO] 2025-09-12 14:58:05,705: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-12 14:58:05,706: Started XML-RPC server [http://Na:38563/]
+[rospy.impl.masterslave][INFO] 2025-09-12 14:58:05,706: _ready: http://Na:38563/
+[rospy.init][INFO] 2025-09-12 14:58:05,707: ROS Slave URI: [http://Na:38563/]
+[rospy.registration][INFO] 2025-09-12 14:58:05,708: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-09-12 14:58:05,709: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-09-12 14:58:05,808: registered with master
+[rospy.rosout][INFO] 2025-09-12 14:58:05,808: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-09-12 14:58:05,813: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-09-12 14:58:05,815: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-09-12 14:58:05,848: Rosbridge WebSocket server started at ws://0.0.0.0:9090
+[rospy.internal][INFO] 2025-09-12 14:58:06,083: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-09-12 15:06:06,178: Client connected.  1 clients total.
+[rosout][INFO] 2025-09-12 15:06:06,185: Client connected.  2 clients total.
+[rosout][INFO] 2025-09-12 15:09:08,227: Client connected.  3 clients total.
+[rosout][INFO] 2025-09-12 15:09:08,235: Client connected.  4 clients total.
+[rosout][INFO] 2025-09-12 15:09:08,239: Client connected.  5 clients total.
+[rosout][INFO] 2025-09-12 15:09:08,244: Client connected.  6 clients total.
+[rosout][INFO] 2025-09-12 15:09:08,249: Client connected.  7 clients total.
+[rosout][INFO] 2025-09-12 15:09:08,252: Client connected.  8 clients total.
+[rosout][INFO] 2025-09-12 15:09:08,255: Client connected.  9 clients total.
+[rosout][INFO] 2025-09-12 15:09:09,239: Client connected.  10 clients total.
+[rosout][INFO] 2025-09-12 15:09:10,231: [Client 2] Subscribed to /ctrl_cmd
+[rosout][INFO] 2025-09-12 15:09:10,339: [Client 9] Advertised service /Service_MoraiEventCmd.
+[rospy.internal][INFO] 2025-09-12 15:36:51,678: topic impl's ref count is zero, deleting topic /ctrl_cmd...
+[rosout][INFO] 2025-09-12 15:36:51,682: Client disconnected. 9 clients total.
+[rosout][INFO] 2025-09-12 15:36:51,689: [Client 2] Unsubscribed from /ctrl_cmd
+[rosout][INFO] 2025-09-12 15:36:51,705: Client disconnected. 8 clients total.
+[rosout][INFO] 2025-09-12 15:36:51,709: Client disconnected. 7 clients total.
+[rosout][INFO] 2025-09-12 15:36:51,713: Client disconnected. 6 clients total.
+[rosout][INFO] 2025-09-12 15:36:51,720: Client disconnected. 5 clients total.
+[rosout][INFO] 2025-09-12 15:36:51,724: Client disconnected. 4 clients total.
+[rosout][INFO] 2025-09-12 15:36:51,729: Client disconnected. 3 clients total.
+[rosout][INFO] 2025-09-12 15:36:52,706: [Client 9] Unadvertised service /Service_MoraiEventCmd.
+[rosout][INFO] 2025-09-12 15:36:53,011: Client disconnected. 2 clients total.
+[rosout][INFO] 2025-09-12 15:36:53,018: Client disconnected. 1 clients total.
+[rosout][INFO] 2025-09-12 15:36:53,021: Client disconnected. 0 clients total.
+[rospy.internal][INFO] 2025-09-12 15:37:01,709: topic impl's ref count is zero, deleting topic /CollisionData...
+[rospy.internal][INFO] 2025-09-12 15:37:01,716: topic impl's ref count is zero, deleting topic /Competition_topic...
+[rospy.internal][INFO] 2025-09-12 15:37:01,720: topic impl's ref count is zero, deleting topic /tf...
+[rospy.internal][INFO] 2025-09-12 15:37:01,724: topic impl's ref count is zero, deleting topic /Object_topic...
+[rospy.internal][INFO] 2025-09-12 15:37:01,728: topic impl's ref count is zero, deleting topic /Ego_topic...
+[rospy.internal][INFO] 2025-09-12 15:37:03,023: topic impl's ref count is zero, deleting topic /image_jpeg/compressed...
+[rospy.internal][INFO] 2025-09-12 15:37:03,026: topic impl's ref count is zero, deleting topic /clock...
+[rospy.core][INFO] 2025-09-12 15:37:10,374: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-09-12 15:37:10,381: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2025-09-12 15:37:10,382: signal-2
+[rospy.core][INFO] 2025-09-12 15:37:10,982: signal_shutdown [atexit]

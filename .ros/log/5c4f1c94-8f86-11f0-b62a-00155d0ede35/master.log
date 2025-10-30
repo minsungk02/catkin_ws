@@ -1,0 +1,55 @@
+[rosmaster.main][INFO] 2025-09-12 12:12:49,680: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2025-09-12 12:12:49,680: Starting ROS Master Node
+[xmlrpc][INFO] 2025-09-12 12:12:49,682: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2025-09-12 12:12:49,683: Started XML-RPC server [http://Na:11311/]
+[xmlrpc][INFO] 2025-09-12 12:12:49,683: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2025-09-12 12:12:49,684: Master initialized: port[11311], uri[http://Na:11311/]
+[rosmaster.master][INFO] 2025-09-12 12:12:49,715: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2025-09-12 12:12:49,717: +PARAM [/roslaunch/uris/host_na__36905] by /roslaunch
+[rosmaster.master][INFO] 2025-09-12 12:12:49,789: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2025-09-12 12:12:49,790: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2025-09-12 12:12:49,873: +SERVICE [/rosout/get_loggers] /rosout http://Na:33355/
+[rosmaster.master][INFO] 2025-09-12 12:12:49,874: +SERVICE [/rosout/set_logger_level] /rosout http://Na:33355/
+[rosmaster.master][INFO] 2025-09-12 12:12:49,877: +PUB [/rosout_agg] /rosout http://Na:33355/
+[rosmaster.master][INFO] 2025-09-12 12:12:49,882: +SUB [/rosout] /rosout http://Na:33355/
+[rosmaster.master][INFO] 2025-09-12 12:19:30,753: +PUB [/chatter] /talker_14574_1757647170716 http://Na:39887/
+[rosmaster.master][INFO] 2025-09-12 12:19:30,848: +PUB [/rosout] /talker_14574_1757647170716 http://Na:39887/
+[rosmaster.master][INFO] 2025-09-12 12:19:30,852: +SERVICE [/talker_14574_1757647170716/get_loggers] /talker_14574_1757647170716 http://Na:39887/
+[rosmaster.master][INFO] 2025-09-12 12:19:30,853: +SERVICE [/talker_14574_1757647170716/set_logger_level] /talker_14574_1757647170716 http://Na:39887/
+[rosmaster.master][INFO] 2025-09-12 12:19:30,855: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_14574_1757647170716
+[rosmaster.master][INFO] 2025-09-12 12:19:30,938: publisherUpdate[/rosout] -> http://Na:33355/ ['http://Na:39887/']
+[rosmaster.master][INFO] 2025-09-12 12:19:30,947: publisherUpdate[/rosout] -> http://Na:33355/ ['http://Na:39887/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-12 12:19:31,156: +CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.master][INFO] 2025-09-12 12:19:31,857: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_14574_1757647170716
+[rosmaster.master][INFO] 2025-09-12 12:19:32,857: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_14574_1757647170716
+[rosmaster.master][INFO] 2025-09-12 12:19:33,857: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_14574_1757647170716
+[rosmaster.master][INFO] 2025-09-12 12:19:34,856: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_14574_1757647170716
+[rosmaster.master][INFO] 2025-09-12 12:19:35,069: -PUB [/chatter] /talker_14574_1757647170716 http://Na:39887/
+[rosmaster.master][INFO] 2025-09-12 12:19:35,069: -PUB [/rosout] /talker_14574_1757647170716 http://Na:39887/
+[rosmaster.master][INFO] 2025-09-12 12:19:35,069: -SERVICE [/talker_14574_1757647170716/get_loggers] /talker_14574_1757647170716 rosrpc://Na:41109
+[rosmaster.master][INFO] 2025-09-12 12:19:35,069: -SERVICE [/talker_14574_1757647170716/set_logger_level] /talker_14574_1757647170716 rosrpc://Na:41109
+[rosmaster.master][INFO] 2025-09-12 12:19:35,158: publisherUpdate[/rosout] -> http://Na:33355/ []
+[rosmaster.master][INFO] 2025-09-12 12:19:35,165: publisherUpdate[/rosout] -> http://Na:33355/ []: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-12 12:28:37,594: +PUB [/chatter] /talker_15877_1757647717553 http://Na:46461/
+[rosmaster.master][INFO] 2025-09-12 12:28:37,686: +PUB [/rosout] /talker_15877_1757647717553 http://Na:46461/
+[rosmaster.master][INFO] 2025-09-12 12:28:37,690: +SERVICE [/talker_15877_1757647717553/get_loggers] /talker_15877_1757647717553 http://Na:46461/
+[rosmaster.master][INFO] 2025-09-12 12:28:37,691: +SERVICE [/talker_15877_1757647717553/set_logger_level] /talker_15877_1757647717553 http://Na:46461/
+[rosmaster.master][INFO] 2025-09-12 12:28:37,692: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_15877_1757647717553
+[rosmaster.master][INFO] 2025-09-12 12:28:37,702: publisherUpdate[/rosout] -> http://Na:33355/ ['http://Na:46461/']
+[rosmaster.master][INFO] 2025-09-12 12:28:37,705: publisherUpdate[/rosout] -> http://Na:33355/ ['http://Na:46461/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-12 12:28:38,694: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_15877_1757647717553
+[rosmaster.master][INFO] 2025-09-12 12:28:39,694: +CACHEDPARAM [/rosout_disable_topics_generation] by /talker_15877_1757647717553
+[rosmaster.master][INFO] 2025-09-12 12:28:40,237: -PUB [/chatter] /talker_15877_1757647717553 http://Na:46461/
+[rosmaster.master][INFO] 2025-09-12 12:28:40,238: -PUB [/rosout] /talker_15877_1757647717553 http://Na:46461/
+[rosmaster.master][INFO] 2025-09-12 12:28:40,238: -SERVICE [/talker_15877_1757647717553/get_loggers] /talker_15877_1757647717553 rosrpc://Na:44093
+[rosmaster.master][INFO] 2025-09-12 12:28:40,238: -SERVICE [/talker_15877_1757647717553/set_logger_level] /talker_15877_1757647717553 rosrpc://Na:44093
+[rosmaster.master][INFO] 2025-09-12 12:28:40,311: publisherUpdate[/rosout] -> http://Na:33355/ []
+[rosmaster.master][INFO] 2025-09-12 12:28:40,316: publisherUpdate[/rosout] -> http://Na:33355/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-09-12 12:41:26,274: -PUB [/rosout_agg] /rosout http://Na:33355/
+[rosmaster.master][INFO] 2025-09-12 12:41:26,276: -SUB [/rosout] /rosout http://Na:33355/
+[rosmaster.master][INFO] 2025-09-12 12:41:26,278: -SERVICE [/rosout/get_loggers] /rosout rosrpc://Na:50917
+[rosmaster.master][INFO] 2025-09-12 12:41:26,279: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://Na:50917
+[rosmaster.master][INFO] 2025-09-12 12:41:26,282: -CACHEDPARAM [/rosout/omit_topics] by /rosout
+[rosmaster.main][INFO] 2025-09-12 12:41:26,450: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2025-09-12 12:41:26,450: stopping master...
+[rospy.core][INFO] 2025-09-12 12:41:26,451: signal_shutdown [atexit]

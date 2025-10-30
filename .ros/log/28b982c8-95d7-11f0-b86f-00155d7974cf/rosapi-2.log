@@ -1,0 +1,18 @@
+[rospy.client][INFO] 2025-09-20 13:06:39,092: init_node, name[/rosapi], pid[5251]
+[xmlrpc][INFO] 2025-09-20 13:06:39,093: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-20 13:06:39,093: Started XML-RPC server [http://172.22.52.56:43967/]
+[rospy.impl.masterslave][INFO] 2025-09-20 13:06:39,094: _ready: http://172.22.52.56:43967/
+[rospy.registration][INFO] 2025-09-20 13:06:39,094: Registering with master node http://172.22.52.56:11311
+[rospy.init][INFO] 2025-09-20 13:06:39,095: ROS Slave URI: [http://172.22.52.56:43967/]
+[rospy.init][INFO] 2025-09-20 13:06:39,095: registered with master
+[rospy.rosout][INFO] 2025-09-20 13:06:39,095: initializing /rosout core topic
+[xmlrpc][INFO] 2025-09-20 13:06:39,096: xml rpc node: starting XML-RPC server
+[rospy.rosout][INFO] 2025-09-20 13:06:39,100: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-09-20 13:06:39,101: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-09-20 13:06:39,134: Rosapi started
+[rospy.internal][INFO] 2025-09-20 13:06:39,317: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-09-20 13:22:37,645: topic[/rosout] removing connection to /rosout
+[rospy.core][INFO] 2025-09-20 13:31:48,865: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2025-09-20 13:31:48,868: cannot unregister with master due to network issues
+[rospy.impl.masterslave][INFO] 2025-09-20 13:31:48,868: signal-2
+[rospy.core][INFO] 2025-09-20 13:31:49,468: signal_shutdown [atexit]

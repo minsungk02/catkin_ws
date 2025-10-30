@@ -1,0 +1,54 @@
+[rosmaster.main][INFO] 2025-10-29 21:18:43,394: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2025-10-29 21:18:43,395: Starting ROS Master Node
+[xmlrpc][INFO] 2025-10-29 21:18:43,396: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2025-10-29 21:18:43,398: Started XML-RPC server [http://172.22.52.56:11311/]
+[xmlrpc][INFO] 2025-10-29 21:18:43,398: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2025-10-29 21:18:43,398: Master initialized: port[11311], uri[http://172.22.52.56:11311/]
+[rosmaster.master][INFO] 2025-10-29 21:18:43,421: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,422: +PARAM [/roslaunch/uris/host_172_22_52_56__35405] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,478: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,478: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,478: +PARAM [/darknet_ros/subscribers/camera_reading/topic] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/subscribers/camera_reading/queue_size] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/actions/camera_reading/name] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/publishers/object_detector/topic] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/publishers/object_detector/queue_size] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/publishers/object_detector/latch] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/publishers/bounding_boxes/topic] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/publishers/bounding_boxes/queue_size] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,479: +PARAM [/darknet_ros/publishers/bounding_boxes/latch] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/publishers/detection_image/topic] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/publishers/detection_image/queue_size] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/publishers/detection_image/latch] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/image_view/enable_opencv] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/image_view/wait_key_delay] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/image_view/enable_console_output] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/yolo_model/config_file/name] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/yolo_model/weight_file/name] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,480: +PARAM [/darknet_ros/yolo_model/threshold/value] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,481: +PARAM [/darknet_ros/yolo_model/detection_classes/names] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,481: +PARAM [/darknet_ros/weights_path] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,481: +PARAM [/darknet_ros/config_path] by /roslaunch
+[rosmaster.master][INFO] 2025-10-29 21:18:43,506: +SERVICE [/rosout/get_loggers] /rosout http://172.22.52.56:37473/
+[rosmaster.master][INFO] 2025-10-29 21:18:43,507: +SERVICE [/rosout/set_logger_level] /rosout http://172.22.52.56:37473/
+[rosmaster.master][INFO] 2025-10-29 21:18:43,508: +PUB [/rosout_agg] /rosout http://172.22.52.56:37473/
+[rosmaster.master][INFO] 2025-10-29 21:18:43,511: +SUB [/rosout] /rosout http://172.22.52.56:37473/
+[rosmaster.master][INFO] 2025-10-29 21:18:43,833: +PUB [/rosout] /darknet_ros http://172.22.52.56:42189/
+[rosmaster.master][INFO] 2025-10-29 21:18:43,834: +SERVICE [/darknet_ros/get_loggers] /darknet_ros http://172.22.52.56:42189/
+[rosmaster.master][INFO] 2025-10-29 21:18:43,835: +SERVICE [/darknet_ros/set_logger_level] /darknet_ros http://172.22.52.56:42189/
+[rosmaster.master][INFO] 2025-10-29 21:18:43,864: +CACHEDPARAM [/rosout_disable_topics_generation] by /darknet_ros
+[rosmaster.master][INFO] 2025-10-29 21:18:43,897: publisherUpdate[/rosout] -> http://172.22.52.56:37473/ ['http://172.22.52.56:42189/']
+[rosmaster.master][INFO] 2025-10-29 21:18:43,901: publisherUpdate[/rosout] -> http://172.22.52.56:37473/ ['http://172.22.52.56:42189/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-10-29 21:18:46,912: -PUB [/rosout] /darknet_ros http://172.22.52.56:42189/
+[rosmaster.master][INFO] 2025-10-29 21:18:46,913: -SERVICE [/darknet_ros/get_loggers] /darknet_ros rosrpc://172.22.52.56:34831
+[rosmaster.master][INFO] 2025-10-29 21:18:46,914: -SERVICE [/darknet_ros/set_logger_level] /darknet_ros rosrpc://172.22.52.56:34831
+[rosmaster.master][INFO] 2025-10-29 21:18:46,914: -CACHEDPARAM [/rosout_disable_topics_generation] by /darknet_ros
+[rosmaster.master][INFO] 2025-10-29 21:18:47,008: publisherUpdate[/rosout] -> http://172.22.52.56:37473/ []
+[rosmaster.master][INFO] 2025-10-29 21:18:47,009: publisherUpdate[/rosout] -> http://172.22.52.56:37473/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2025-10-29 21:18:49,416: -PUB [/rosout_agg] /rosout http://172.22.52.56:37473/
+[rosmaster.master][INFO] 2025-10-29 21:18:49,417: -SUB [/rosout] /rosout http://172.22.52.56:37473/
+[rosmaster.master][INFO] 2025-10-29 21:18:49,417: -SERVICE [/rosout/get_loggers] /rosout rosrpc://172.22.52.56:39351
+[rosmaster.master][INFO] 2025-10-29 21:18:49,418: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://172.22.52.56:39351
+[rosmaster.main][INFO] 2025-10-29 21:18:49,455: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2025-10-29 21:18:49,455: stopping master...
+[rospy.core][INFO] 2025-10-29 21:18:49,456: signal_shutdown [atexit]

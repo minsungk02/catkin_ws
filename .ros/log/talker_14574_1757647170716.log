@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2025-09-12 12:19:30,740: init_node, name[/talker_14574_1757647170716], pid[14574]
+[xmlrpc][INFO] 2025-09-12 12:19:30,741: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-12 12:19:30,742: Started XML-RPC server [http://Na:39887/]
+[rospy.impl.masterslave][INFO] 2025-09-12 12:19:30,742: _ready: http://Na:39887/
+[rospy.registration][INFO] 2025-09-12 12:19:30,743: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2025-09-12 12:19:30,743: Registering publisher topic [/chatter] type [std_msgs/String] with master
+[xmlrpc][INFO] 2025-09-12 12:19:30,744: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-09-12 12:19:30,746: ROS Slave URI: [http://Na:39887/]
+[rospy.init][INFO] 2025-09-12 12:19:30,847: registered with master
+[rospy.rosout][INFO] 2025-09-12 12:19:30,847: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-09-12 12:19:30,849: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-09-12 12:19:30,851: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-09-12 12:19:30,854: hello MORAI 1757647170.8545258
+[rospy.internal][INFO] 2025-09-12 12:19:31,153: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-09-12 12:19:31,856: hello MORAI 1757647171.8559632
+[rosout][INFO] 2025-09-12 12:19:32,856: hello MORAI 1757647172.8560514
+[rosout][INFO] 2025-09-12 12:19:33,855: hello MORAI 1757647173.8557887
+[rosout][INFO] 2025-09-12 12:19:34,856: hello MORAI 1757647174.855952
+[rospy.core][INFO] 2025-09-12 12:19:35,068: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-09-12 12:19:35,070: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2025-09-12 12:19:35,070: signal-2
+[rospy.core][INFO] 2025-09-12 12:19:35,855: signal_shutdown [atexit]

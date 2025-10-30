@@ -1,0 +1,21 @@
+[rosmaster.main][INFO] 2025-09-11 19:00:57,687: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2025-09-11 19:00:57,687: Starting ROS Master Node
+[xmlrpc][INFO] 2025-09-11 19:00:57,689: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2025-09-11 19:00:57,690: Started XML-RPC server [http://Na:11311/]
+[xmlrpc][INFO] 2025-09-11 19:00:57,690: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2025-09-11 19:00:57,690: Master initialized: port[11311], uri[http://Na:11311/]
+[rosmaster.master][INFO] 2025-09-11 19:00:57,716: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2025-09-11 19:00:57,717: +PARAM [/roslaunch/uris/host_na__36655] by /roslaunch
+[rosmaster.master][INFO] 2025-09-11 19:00:57,756: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2025-09-11 19:00:57,757: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2025-09-11 19:00:57,805: +SERVICE [/rosout/get_loggers] /rosout http://Na:40545/
+[rosmaster.master][INFO] 2025-09-11 19:00:57,806: +SERVICE [/rosout/set_logger_level] /rosout http://Na:40545/
+[rosmaster.master][INFO] 2025-09-11 19:00:57,807: +PUB [/rosout_agg] /rosout http://Na:40545/
+[rosmaster.master][INFO] 2025-09-11 19:00:57,812: +SUB [/rosout] /rosout http://Na:40545/
+[rosmaster.master][INFO] 2025-09-11 19:01:06,029: -PUB [/rosout_agg] /rosout http://Na:40545/
+[rosmaster.master][INFO] 2025-09-11 19:01:06,030: -SUB [/rosout] /rosout http://Na:40545/
+[rosmaster.master][INFO] 2025-09-11 19:01:06,031: -SERVICE [/rosout/get_loggers] /rosout rosrpc://Na:44565
+[rosmaster.master][INFO] 2025-09-11 19:01:06,031: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://Na:44565
+[rosmaster.main][INFO] 2025-09-11 19:01:06,125: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2025-09-11 19:01:06,125: stopping master...
+[rospy.core][INFO] 2025-09-11 19:01:06,125: signal_shutdown [atexit]

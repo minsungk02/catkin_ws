@@ -1,0 +1,41 @@
+[rospy.client][INFO] 2025-09-15 15:27:53,454: init_node, name[/rosbridge_websocket], pid[138]
+[xmlrpc][INFO] 2025-09-15 15:27:53,455: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-15 15:27:53,455: Started XML-RPC server [http://Na:36755/]
+[rospy.impl.masterslave][INFO] 2025-09-15 15:27:53,455: _ready: http://Na:36755/
+[rospy.registration][INFO] 2025-09-15 15:27:53,458: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2025-09-15 15:27:53,459: ROS Slave URI: [http://Na:36755/]
+[rospy.init][INFO] 2025-09-15 15:27:53,459: registered with master
+[rospy.rosout][INFO] 2025-09-15 15:27:53,459: initializing /rosout core topic
+[xmlrpc][INFO] 2025-09-15 15:27:53,460: xml rpc node: starting XML-RPC server
+[rospy.rosout][INFO] 2025-09-15 15:27:53,462: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-09-15 15:27:53,463: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-09-15 15:27:53,489: Rosbridge WebSocket server started at ws://0.0.0.0:9090
+[rospy.internal][INFO] 2025-09-15 15:27:53,683: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-09-15 15:28:34,721: Client connected.  1 clients total.
+[rosout][INFO] 2025-09-15 15:28:34,726: Client connected.  2 clients total.
+[rosout][INFO] 2025-09-15 15:28:34,730: Client connected.  3 clients total.
+[rosout][INFO] 2025-09-15 15:28:34,733: Client connected.  4 clients total.
+[rosout][INFO] 2025-09-15 15:28:34,738: Client connected.  5 clients total.
+[rosout][INFO] 2025-09-15 15:28:34,741: Client connected.  6 clients total.
+[rosout][INFO] 2025-09-15 15:28:34,746: Client connected.  7 clients total.
+[rosout][INFO] 2025-09-15 15:28:34,749: Client connected.  8 clients total.
+[rosout][INFO] 2025-09-15 15:28:35,719: Client connected.  9 clients total.
+[rosout][INFO] 2025-09-15 15:28:36,733: [Client 6] Subscribed to /ctrl_cmd
+[rosout][INFO] 2025-09-15 15:28:36,784: [Client 8] Advertised service /Service_MoraiEventCmd.
+[rosout][INFO] 2025-09-15 15:28:37,118: Client connected.  10 clients total.
+[rospy.internal][INFO] 2025-09-15 15:36:46,637: topic[/ctrl_cmd] adding connection to [http://Na:34859/], count 0
+[rospy.core][INFO] 2025-09-15 15:40:11,885: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-09-15 15:40:11,902: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-09-15 15:40:11,903: topic[/ctrl_cmd] removing connection to http://Na:34859/
+[rospy.impl.masterslave][INFO] 2025-09-15 15:40:11,903: signal-2
+[rosout][INFO] 2025-09-15 15:40:12,506: Client disconnected. 9 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,525: Client disconnected. 8 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,531: Client disconnected. 7 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,538: Client disconnected. 6 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,543: Client disconnected. 5 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,549: Client disconnected. 4 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,559: Client disconnected. 3 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,564: Client disconnected. 2 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,571: Client disconnected. 1 clients total.
+[rosout][INFO] 2025-09-15 15:40:12,575: Client disconnected. 0 clients total.
+[rospy.core][INFO] 2025-09-15 15:40:12,589: signal_shutdown [atexit]

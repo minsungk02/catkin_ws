@@ -1,0 +1,86 @@
+[roslaunch][INFO] 2025-09-12 12:12:48,903: Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+[roslaunch][INFO] 2025-09-12 12:12:48,912: Done checking log file disk usage. Usage is <1GB.
+[roslaunch][INFO] 2025-09-12 12:12:48,912: roslaunch starting with args ['roscore', '--core']
+[roslaunch][INFO] 2025-09-12 12:12:48,913: roslaunch env is environ({'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'WSL_DISTRO_NAME': 'Ubuntu-20.04', 'PKG_CONFIG_PATH': '/home/hyeongseon/baqu4_morai_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'ROS_PACKAGE_PATH': '/home/hyeongseon/baqu4_morai_ws/src:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/hyeongseon/baqu4_morai_ws/devel/share/common-lisp', 'NAME': 'Na', 'PWD': '/home/hyeongseon/baqu4_morai_ws', 'LOGNAME': 'hyeongseon', 'HOME': '/home/hyeongseon', 'LANG': 'C.UTF-8', 'WSL_INTEROP': '/run/WSL/1942_interop', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'WAYLAND_DISPLAY': 'wayland-0', 'CMAKE_PREFIX_PATH': '/home/hyeongseon/baqu4_morai_ws/devel:/opt/ros/noetic', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PYTHONPATH': '/home/hyeongseon/baqu4_morai_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'TERM': 'xterm-256color', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'hyeongseon', 'DISPLAY': ':0', 'SHLVL': '1', 'ROS_MASTER_URI': 'http://Na:11311/', 'LD_LIBRARY_PATH': '/home/hyeongseon/baqu4_morai_ws/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/mnt/wslg/runtime-dir', 'WSLENV': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/snap/bin', 'HOSTTYPE': 'x86_64', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'OLDPWD': '/home/hyeongseon/baqu4_morai_ws/src', '_': '/opt/ros/noetic/bin/roscore', 'ROS_LOG_FILENAME': '/home/hyeongseon/.ros/log/5c4f1c94-8f86-11f0-b62a-00155d0ede35/roslaunch-Na-13045.log'})
+[roslaunch][INFO] 2025-09-12 12:12:48,913: starting in server mode
+[roslaunch.parent][INFO] 2025-09-12 12:12:48,913: starting roslaunch parent run
+[roslaunch][INFO] 2025-09-12 12:12:48,914: loading roscore config file /opt/ros/noetic/etc/ros/roscore.xml
+[roslaunch][INFO] 2025-09-12 12:12:49,169: Added core node of type [rosout/rosout] in namespace [/]
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,169: start_process_monitor: creating ProcessMonitor
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,169: created process monitor <ProcessMonitor(ProcessMonitor-1, initial daemon)>
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,170: start_process_monitor: ProcessMonitor started
+[roslaunch.parent][INFO] 2025-09-12 12:12:49,171: starting parent XML-RPC server
+[roslaunch.server][INFO] 2025-09-12 12:12:49,171: starting roslaunch XML-RPC server
+[roslaunch.server][INFO] 2025-09-12 12:12:49,172: waiting for roslaunch XML-RPC server to initialize
+[xmlrpc][INFO] 2025-09-12 12:12:49,173: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-12 12:12:49,174: Started XML-RPC server [http://Na:36905/]
+[xmlrpc][INFO] 2025-09-12 12:12:49,174: xml rpc node: starting XML-RPC server
+[roslaunch][INFO] 2025-09-12 12:12:49,187: started roslaunch server http://Na:36905/
+[roslaunch.parent][INFO] 2025-09-12 12:12:49,188: ... parent XML-RPC server started
+[roslaunch][INFO] 2025-09-12 12:12:49,188: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,194: auto-starting new master
+[roslaunch][INFO] 2025-09-12 12:12:49,194: create_master_process: rosmaster, /opt/ros/noetic/share/ros, 11311, 3, None, False
+[roslaunch][INFO] 2025-09-12 12:12:49,194: process[master]: launching with args [['rosmaster', '--core', '-p', '11311', '-w', '3']]
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,194: ProcessMonitor.register[master]
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,194: ProcessMonitor.register[master] complete
+[roslaunch][INFO] 2025-09-12 12:12:49,194: process[master]: starting os process
+[roslaunch][INFO] 2025-09-12 12:12:49,194: process[master]: start w/ args [['rosmaster', '--core', '-p', '11311', '-w', '3', '__log:=/home/hyeongseon/.ros/log/5c4f1c94-8f86-11f0-b62a-00155d0ede35/master.log']]
+[roslaunch][INFO] 2025-09-12 12:12:49,195: process[master]: cwd will be [/home/hyeongseon/.ros]
+[roslaunch][INFO] 2025-09-12 12:12:49,199: process[master]: started with pid [13053]
+[roslaunch][INFO] 2025-09-12 12:12:49,199: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,300: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,401: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,502: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,603: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,705: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,708: master.is_running[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,711: ROS_MASTER_URI=http://Na:11311/
+[roslaunch][INFO] 2025-09-12 12:12:49,714: setting /run_id to 5c4f1c94-8f86-11f0-b62a-00155d0ede35
+[roslaunch][INFO] 2025-09-12 12:12:49,716: setting /roslaunch/uris/host_na__36905' to http://Na:36905/
+[roslaunch][INFO] 2025-09-12 12:12:49,721: ... preparing to launch node of type [rosout/rosout]
+[roslaunch][INFO] 2025-09-12 12:12:49,722: create_node_process: package[rosout] type[rosout] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://Na:11311/]
+[roslaunch][INFO] 2025-09-12 12:12:49,722: process[rosout-1]: env[{'SHELL': '/bin/bash', 'ROS_VERSION': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'WSL_DISTRO_NAME': 'Ubuntu-20.04', 'PKG_CONFIG_PATH': '/home/hyeongseon/baqu4_morai_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'ROS_PACKAGE_PATH': '/home/hyeongseon/baqu4_morai_ws/src:/opt/ros/noetic/share', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/hyeongseon/baqu4_morai_ws/devel/share/common-lisp', 'NAME': 'Na', 'PWD': '/home/hyeongseon/baqu4_morai_ws', 'LOGNAME': 'hyeongseon', 'HOME': '/home/hyeongseon', 'LANG': 'C.UTF-8', 'WSL_INTEROP': '/run/WSL/1942_interop', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'WAYLAND_DISPLAY': 'wayland-0', 'CMAKE_PREFIX_PATH': '/home/hyeongseon/baqu4_morai_ws/devel:/opt/ros/noetic', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PYTHONPATH': '/home/hyeongseon/baqu4_morai_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages', 'TERM': 'xterm-256color', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'hyeongseon', 'DISPLAY': ':0', 'SHLVL': '1', 'ROS_MASTER_URI': 'http://Na:11311/', 'LD_LIBRARY_PATH': '/home/hyeongseon/baqu4_morai_ws/devel/lib:/opt/ros/noetic/lib', 'XDG_RUNTIME_DIR': '/mnt/wslg/runtime-dir', 'WSLENV': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PATH': '/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/snap/bin', 'HOSTTYPE': 'x86_64', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'OLDPWD': '/home/hyeongseon/baqu4_morai_ws/src', '_': '/opt/ros/noetic/bin/roscore', 'ROS_LOG_FILENAME': '/home/hyeongseon/.ros/log/5c4f1c94-8f86-11f0-b62a-00155d0ede35/roslaunch-Na-13045.log'}]
+[roslaunch][INFO] 2025-09-12 12:12:49,771: process[rosout-1]: args[['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout']]
+[roslaunch][INFO] 2025-09-12 12:12:49,771: ... created process [rosout-1]
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,771: ProcessMonitor.register[rosout-1]
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,771: ProcessMonitor.register[rosout-1] complete
+[roslaunch][INFO] 2025-09-12 12:12:49,771: ... registered process [rosout-1]
+[roslaunch][INFO] 2025-09-12 12:12:49,771: process[rosout-1]: starting os process
+[roslaunch][INFO] 2025-09-12 12:12:49,772: process[rosout-1]: start w/ args [['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout', '__log:=/home/hyeongseon/.ros/log/5c4f1c94-8f86-11f0-b62a-00155d0ede35/rosout-1.log']]
+[roslaunch][INFO] 2025-09-12 12:12:49,772: process[rosout-1]: cwd will be [/home/hyeongseon/.ros]
+[roslaunch][INFO] 2025-09-12 12:12:49,784: process[rosout-1]: started with pid [13063]
+[roslaunch][INFO] 2025-09-12 12:12:49,784: ... successfully launched [rosout-1]
+[roslaunch][INFO] 2025-09-12 12:12:49,785: load_parameters starting ...
+[roslaunch][INFO] 2025-09-12 12:12:49,790: ... load_parameters complete
+[roslaunch][INFO] 2025-09-12 12:12:49,791: launch_nodes: launching local nodes ...
+[roslaunch][INFO] 2025-09-12 12:12:49,791: ... launch_nodes complete
+[roslaunch.pmon][INFO] 2025-09-12 12:12:49,791: registrations completed <ProcessMonitor(ProcessMonitor-1, started daemon 140395646908160)>
+[roslaunch.parent][INFO] 2025-09-12 12:12:49,791: ... roslaunch parent running, waiting for process exit
+[roslaunch][INFO] 2025-09-12 12:12:49,791: spin
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,115: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, started daemon 140395646908160)>
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,138: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 140395646908160)>
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,139: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 140395646908160)>: remaining procs are [<roslaunch.nodeprocess.LocalProcess object at 0x7fb068ace8e0>, <roslaunch.nodeprocess.LocalProcess object at 0x7fb068ace550>]
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,146: ProcessMonitor exit: killing rosout-1
+[roslaunch][INFO] 2025-09-12 12:41:26,147: [rosout-1] killing on exit
+[roslaunch][INFO] 2025-09-12 12:41:26,147: process[rosout-1]: killing os process with pid[13063] pgid[13063]
+[roslaunch][INFO] 2025-09-12 12:41:26,147: [rosout-1] sending SIGINT to pgid [13063]
+[roslaunch][INFO] 2025-09-12 12:41:26,147: [rosout-1] sent SIGINT to pgid [13063]
+[roslaunch][INFO] 2025-09-12 12:41:26,449: process[rosout-1]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,449: ProcessMonitor exit: killing master
+[roslaunch][INFO] 2025-09-12 12:41:26,449: [master] killing on exit
+[roslaunch][INFO] 2025-09-12 12:41:26,450: process[master]: killing os process with pid[13053] pgid[13053]
+[roslaunch][INFO] 2025-09-12 12:41:26,450: [master] sending SIGINT to pgid [13053]
+[roslaunch][INFO] 2025-09-12 12:41:26,450: [master] sent SIGINT to pgid [13053]
+[roslaunch][INFO] 2025-09-12 12:41:26,651: process[master]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,651: ProcessMonitor exit: cleaning up data structures and signals
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,651: ProcessMonitor exit: pmon has shutdown
+[roslaunch][INFO] 2025-09-12 12:41:26,651: process monitor is done spinning, initiating full shutdown
+[roslaunch][INFO] 2025-09-12 12:41:26,652: runner.stop()
+[roslaunch][INFO] 2025-09-12 12:41:26,652: shutting down processing monitor...
+[roslaunch][INFO] 2025-09-12 12:41:26,652: shutting down processing monitor <ProcessMonitor(ProcessMonitor-1, stopped daemon 140395646908160)>
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,652: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 140395646908160)>
+[roslaunch][INFO] 2025-09-12 12:41:26,652: ... shutting down processing monitor complete
+[roslaunch][INFO] 2025-09-12 12:41:26,652: done
+[roslaunch.pmon][INFO] 2025-09-12 12:41:26,653: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 140395646908160)>
+[rospy.core][INFO] 2025-09-12 12:41:26,653: signal_shutdown [atexit]

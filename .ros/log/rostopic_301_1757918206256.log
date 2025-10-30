@@ -1,0 +1,10 @@
+[rospy.client][INFO] 2025-09-15 15:36:46,496: init_node, name[/rostopic_301_1757918206256], pid[301]
+[xmlrpc][INFO] 2025-09-15 15:36:46,497: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-09-15 15:36:46,498: Started XML-RPC server [http://Na:34859/]
+[rospy.init][INFO] 2025-09-15 15:36:46,499: ROS Slave URI: [http://Na:34859/]
+[rospy.impl.masterslave][INFO] 2025-09-15 15:36:46,499: _ready: http://Na:34859/
+[rospy.registration][INFO] 2025-09-15 15:36:46,500: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-09-15 15:36:46,500: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-09-15 15:36:46,599: registered with master
+[rospy.internal][INFO] 2025-09-15 15:36:46,642: topic[/ctrl_cmd] adding connection to [/rosbridge_websocket], count 0
+[rospy.internal][INFO] 2025-09-15 15:40:12,122: topic[/ctrl_cmd] removing connection to /rosbridge_websocket

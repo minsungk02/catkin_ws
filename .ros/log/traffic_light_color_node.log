@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2025-10-29 17:00:28,826: init_node, name[/traffic_light_color_node], pid[9446]
+[xmlrpc][INFO] 2025-10-29 17:00:28,827: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2025-10-29 17:00:28,827: Started XML-RPC server [http://172.22.52.56:44989/]
+[rospy.impl.masterslave][INFO] 2025-10-29 17:00:28,827: _ready: http://172.22.52.56:44989/
+[rospy.init][INFO] 2025-10-29 17:00:28,829: ROS Slave URI: [http://172.22.52.56:44989/]
+[rospy.registration][INFO] 2025-10-29 17:00:28,830: Registering with master node http://172.22.52.56:11311
+[xmlrpc][INFO] 2025-10-29 17:00:28,830: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-10-29 17:00:28,930: registered with master
+[rospy.rosout][INFO] 2025-10-29 17:00:28,942: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-10-29 17:00:28,944: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-10-29 17:00:28,945: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-10-29 17:00:28,958: [traffic_light_color_node] subscribe=/camera/image_raw publish=/traffic_detection thr=0.020
+[rospy.internal][INFO] 2025-10-29 17:00:28,962: topic[/camera/image_raw] adding connection to [http://172.22.52.56:45063/], count 0
+[rospy.internal][INFO] 2025-10-29 17:00:29,148: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-10-29 17:01:01,394: topic[/traffic_detection] adding connection to [/rostopic_9569_1761724861244], count 0
+[rospy.internal][INFO] 2025-10-29 17:01:03,258: topic[/traffic_detection] removing connection to /rostopic_9569_1761724861244
+[rospy.internal][INFO] 2025-10-29 17:05:04,692: topic[/traffic_detection] adding connection to [/rostopic_9721_1761725104526], count 0
+[rospy.internal][INFO] 2025-10-29 17:05:22,154: topic[/traffic_detection] removing connection to /rostopic_9721_1761725104526
+[rospy.internal][INFO] 2025-10-29 17:05:45,129: topic[/rosout] removing connection to /rosout

@@ -1,0 +1,25 @@
+
+
+1759994274.115224667  Node Startup
+1759994321.330437660 INFO /rosapi [rosapi_node:202(<module>)] [topics: /rosout] Rosapi started
+1759994321.645958423 INFO /rosbridge_websocket [rosbridge_websocket:312(<module>)] [topics: /connected_clients, /rosout, /client_count] Rosbridge WebSocket server started at ws://0.0.0.0:9090
+1759994340.359493732 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  1 clients total.
+1759994340.362157583 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  2 clients total.
+1759994340.364790439 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  3 clients total.
+1759994340.367373704 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  4 clients total.
+1759994340.369591474 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  5 clients total.
+1759994340.371872186 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  6 clients total.
+1759994340.375682115 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  7 clients total.
+1759994341.366146326 INFO /rosbridge_websocket [autobahn_websocket.py:195(RosbridgeWebSocket.onOpen)] [topics: /connected_clients, /rosout, /client_count] Client connected.  8 clients total.
+1759994342.358375787 INFO /rosbridge_websocket [protocol.py:403(RosbridgeProtocol.log)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /ctrl_cmd, /Competition_topic, /Object_topic] [Client 6] Subscribed to /ctrl_cmd
+1759994342.374421834 INFO /rosbridge_websocket [protocol.py:403(RosbridgeProtocol.log)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /ctrl_cmd, /Competition_topic, /Object_topic] [Client 7] Advertised service /Service_MoraiEventCmd.
+1759994505.488381385 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 7 clients total.
+1759994505.491431474 INFO /rosbridge_websocket [protocol.py:403(RosbridgeProtocol.log)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] [Client 6] Unsubscribed from /ctrl_cmd
+1759994505.500004053 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 6 clients total.
+1759994505.503756761 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 5 clients total.
+1759994505.507671833 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 4 clients total.
+1759994505.511819839 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 3 clients total.
+1759994505.514994859 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 2 clients total.
+1759994505.518712282 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 1 clients total.
+1759994506.154123544 INFO /rosbridge_websocket [autobahn_websocket.py:255(RosbridgeWebSocket.onClose)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] Client disconnected. 0 clients total.
+1759994506.498868942 INFO /rosbridge_websocket [protocol.py:403(RosbridgeProtocol.log)] [topics: /Ego_topic, /rosout, /tf, /connected_clients, /clock, /client_count, /CollisionData, /Competition_topic, /Object_topic] [Client 7] Unadvertised service /Service_MoraiEventCmd.
