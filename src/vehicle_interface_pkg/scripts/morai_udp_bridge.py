@@ -69,30 +69,33 @@ class MoraiUDPBridge:
             except BlockingIOError:
                 return
 
+            rospy.logdebug("[interface] received UDP packet len=%d", len(data))
             status = self.parse_status(data)
             if status is not None:
                 self.status_pub.publish(status)
 
     def parse_status(self, data: bytes) -> Optional[EgoVehicleStatus]:
         """UDP 패킷 -> EgoVehicleStatus 변환."""
-        if len(data) < len(INFO_PREFIX) + INFO_AUX_LEN + INFO_PAYLOAD_LEN + len(TAIL_BYTES):
-            rospy.logdebug("[interface] status packet too short len=%d", len(data))
+        min_len = len(INFO_PREFIX) + 4 + INFO_AUX_LEN + INFO_PAYLOAD_LEN + len(TAIL_BYTES)
+        if len(data) < min_len:
+            rospy.logwarn("[interface] status packet too short len=%d (expected >= %d)", len(data), min_len)
             return None
         if not data.startswith(INFO_PREFIX):
-            rospy.logdebug("[interface] invalid status header")
+            rospy.logwarn("[interface] invalid status header: %s", data[:len(INFO_PREFIX)])
             return None
         if not data.endswith(TAIL_BYTES):
-            rospy.logdebug("[interface] invalid status tail")
+            rospy.logwarn("[interface] invalid status tail: %s", data[-len(TAIL_BYTES):])
             return None
 
         offset = len(INFO_PREFIX)
         data_len = struct.unpack_from("<I", data, offset)[0]
         offset += 4
+        rospy.logdebug("[interface] status data_len=%d", data_len)
         offset += INFO_AUX_LEN
 
         payload = data[offset : offset + data_len]
         if len(payload) < INFO_PAYLOAD_LEN:
-            rospy.logdebug("[interface] payload length mismatch: %d", len(payload))
+            rospy.logwarn("[interface] payload length mismatch: %d", len(payload))
             return None
 
         idx = 0

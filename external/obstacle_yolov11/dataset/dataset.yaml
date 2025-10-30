@@ -1,4 +1,4 @@
-path: C:/Users/kksnh/OneDrive/바탕 화면/obstacle_yolov11/dataset
+path: /home/minsungk02/catkin_ws/external/obstacle_yolov11/dataset
 train: images/train
 val: images/val
 test: images/test

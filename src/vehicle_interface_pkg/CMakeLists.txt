@@ -14,5 +14,6 @@ catkin_package()
 
 catkin_install_python(PROGRAMS
   scripts/morai_udp_bridge.py
+  scripts/camera_udp_receiver.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
